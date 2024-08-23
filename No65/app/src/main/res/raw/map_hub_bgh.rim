@@ -1,0 +1,2787 @@
+{
+  "nameId": 113,
+  "map": [
+    {
+      "row": 0,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": -2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 0,
+            "col": -2
+          }
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 2
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 3
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 3
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 2
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": -2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 1,
+            "col": -2
+          }
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -1,
+            "col": 0
+          }
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": -1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 1,
+            "col": -1
+          }
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": -1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -1,
+            "col": -1
+          }
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 1,
+            "col": 0
+          }
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": -2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -1,
+            "col": -2
+          }
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 2
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 3
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -2,
+            "col": 3
+          }
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -2,
+            "col": 2
+          }
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -2,
+            "col": 1
+          }
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 2,
+            "col": 1
+          }
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 2,
+            "col": 2
+          }
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.FenceHorizontal",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 2,
+            "col": 3
+          }
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject2",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -3,
+            "col": 9
+          }
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorLuckyFlower",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -3,
+            "col": 3
+          }
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorLuckyFlower",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -3,
+            "col": 2
+          }
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorLuckyFlower",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -3,
+            "col": 1
+          }
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 3,
+            "col": 2
+          }
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.interactive.CellInfo",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 3,
+            "col": 3
+          }
+        }
+      },
+      "messageNumber": 36
+    },
+    {
+      "row": 3,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.interactive.PointOfInterest",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -5,
+            "col": 5
+          }
+        }
+      },
+      "messageNumber": 37
+    },
+    {
+      "row": 5,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 5,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 5,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 5,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 5,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.interactive.CellInfo",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 5,
+            "col": 9
+          }
+        }
+      },
+      "messageNumber": 38
+    },
+    {
+      "row": -6,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.character.npc.Progress",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -6,
+            "col": 7
+          }
+        }
+      },
+      "state": "CHILL"
+    },
+    {
+      "row": -6,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 6,
+            "col": 9
+          }
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -7,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.interactive.Note",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -7,
+            "col": 8
+          }
+        }
+      },
+      "messageNumber": 39
+    },
+    {
+      "row": -7,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorTools",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -7,
+            "col": 7
+          }
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -7,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorEmptyAquarium",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -7,
+            "col": 5
+          }
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorChessboard",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 7,
+            "col": 5
+          }
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DoubleTapCell",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 7,
+            "col": 6
+          }
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 7,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 7,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 7,
+            "col": 9
+          }
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 4,
+            "col": 9
+          }
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 3,
+            "col": 9
+          }
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": -3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": -3
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": -2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": -2
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": -1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": -1
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": -3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": -3
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": -3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": -3
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": -3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": -3
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": -3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": -3
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": -2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": -2
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": -1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": -1
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": 8,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 8,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 7,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 5,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 5,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 3,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -7,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": -8,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -8,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": 5,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.character.npc.GreatPower",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 5,
+            "col": 7
+          }
+        }
+      },
+      "state": "HUB_NOT_LAUGHING"
+    },
+    {
+      "row": 5,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 5,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 12
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 12
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 11
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 11
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 13
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 13
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 13
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 13
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 13
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 13
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 12
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 12
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 11
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 11
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 10
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 10
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 12
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.service.TeleportCell",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 12
+        }
+      },
+      "toMapIndex": 0,
+      "toCoordinates": {
+        "row": 18,
+        "col": -4
+      }
+    },
+    {
+      "row": 0,
+      "col": 11
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 11
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 9
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 9
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 8
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 8
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": -1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.MarketDecorCocktailGlass",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 0,
+            "col": -1
+          }
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorArtObject2",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": -3,
+            "col": 5
+          }
+        }
+      }
+    },
+    {
+      "row": -3,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -3,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": -7,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -7,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -5,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -5,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 3
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": -4,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 2
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 0
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 0
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 1
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 1
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 2
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 2
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 3
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 3
+        }
+      }
+    },
+    {
+      "row": 5,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 5,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 6,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 6,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 7,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 7,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 5
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 7
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 7
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorBalloon",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 3,
+            "col": 6
+          }
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 6
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 4,
+          "col": 6
+        }
+      }
+    },
+    {
+      "row": 3,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorBalloon",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 3,
+            "col": 5
+          }
+        }
+      }
+    },
+    {
+      "row": 4,
+      "col": 5
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.decor.DecorBalloon",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 4,
+            "col": 5
+          }
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 4
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 4
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 11
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 11
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 12
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 12
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 13
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 13
+        }
+      }
+    },
+    {
+      "row": -2,
+      "col": 14
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 14
+        }
+      }
+    },
+    {
+      "row": -1,
+      "col": 14
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -1,
+          "col": 14
+        }
+      }
+    },
+    {
+      "row": 0,
+      "col": 14
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 14
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 14
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 14
+        }
+      }
+    },
+    {
+      "row": 1,
+      "col": 14
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 1,
+          "col": 14
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 13
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 13
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 12
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 12
+        }
+      }
+    },
+    {
+      "row": 2,
+      "col": 11
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.BrickWall",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 11
+        }
+      }
+    }
+  ]
+}

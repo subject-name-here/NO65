@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="almost_black">#222222</color>
+    <color name="white">#FFFFFF</color>
+    <color name="almost_white">#FAFAFA</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#CD0101</color>
+    <color name="orange">#FFC00C</color>
+    <color name="true_green">#00FF00</color>
+    <color name="green">#007700</color>
+    <color name="blue">#0000FF</color>
+    <color name="bluish">#5050FF</color>
+    <color name="true_yellow">#FFFF00</color>
+    <color name="energized_yellow">#F4D821</color>
+    <color name="yellow">#AFAF00</color>
+    <color name="brown">#781108</color>
+    <color name="grey">#808080</color>
+    <color name="dark_grey">#606060</color>
+    <color name="dark_blue">#003955</color>
+
+    <color name="purple">#9C27B0</color>
+    <color name="poison_pink">#FF00DD</color>
+    <color name="pink">#FF9E96</color>
+    <color name="dark_pink">#C57A74</color>
+    <color name="anti_purple">#63D84F</color>
+    <color name="anti_pink">#006169</color>
+
+    <color name="light_grey">#CCCCCC</color>
+    <color name="light_blue">#00BCD4</color>
+    <color name="lighter_blue">#03D3ED</color>
+    <color name="anti_light_grey">#FF333333</color>
+    <color name="anti_light_blue">#FF432B</color>
+
+
+    <color name="little_angel_color">#7E104A</color>
+    <color name="brick_color">#E53935</color>
+    <color name="waterball_background_color">#8CD9FF</color>
+    <color name="sand">#E6C948</color>
+    <color name="rust">#8A2525</color>
+    <color name="blurple">#5A3DA5</color>
+    <color name="daa">#DAA</color>
+
+    <color name="no_color">#00F7FF</color>
+    <color name="transparent">#00000000</color>
+</resources>

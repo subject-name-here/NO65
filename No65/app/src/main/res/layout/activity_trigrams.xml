@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <TextView
+        android:id="@+id/help_monograms_header"
+        style="@style/help_header_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/monograms_header"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/monogram_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_10">
+
+        <TextView
+            android:id="@+id/yang_symbol"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_yang_symbol"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_help_m_50"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_help_m_v20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_help_m_v20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <TextView
+            android:id="@+id/yang_word"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_yang_name"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_help_m_50"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_help_m_v50"
+            app:layout_constraintStart_toEndOf="@+id/yang_symbol"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_help_m_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <TextView
+            android:id="@+id/yang_gesture"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_swipe"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_help_m_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_help_m_v50"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_help_m_v50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/yin_symbol"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_yin_symbol"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_help_m_v20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_help_m_50" />
+
+        <TextView
+            android:id="@+id/yin_word"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_yin_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_help_m_v50"
+            app:layout_constraintStart_toStartOf="@+id/guideline_help_m_v20"
+            app:layout_constraintTop_toTopOf="@+id/guideline_help_m_50" />
+
+        <TextView
+            android:id="@+id/yin_gesture"
+            style="@style/help_item_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/monograms_double_tap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_help_m_v50"
+            app:layout_constraintTop_toTopOf="@+id/guideline_help_m_50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/help_trigrams_header"
+        style="@style/help_header_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_header"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_35"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/water_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_water_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_42"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_35" />
+
+    <TextView
+        android:id="@+id/wind_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_wind_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_49"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_42" />
+
+    <TextView
+        android:id="@+id/lake_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_lake_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_56"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_49" />
+
+    <TextView
+        android:id="@+id/fire_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_fire_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_63"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_56" />
+
+    <TextView
+        android:id="@+id/mountain_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_mountain_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_70"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_63" />
+
+    <TextView
+        android:id="@+id/thunder_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_thunder_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_77"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_70" />
+
+    <TextView
+        android:id="@+id/earth_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_earth_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_84"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_77" />
+
+    <TextView
+        android:id="@+id/heaven_symbol"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_heaven_symbol"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_91"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_v20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+
+    <TextView
+        android:id="@+id/water_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_water_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_42"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_35" />
+
+    <TextView
+        android:id="@+id/wind_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_wind_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_49"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_42" />
+
+    <TextView
+        android:id="@+id/lake_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_lake_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_56"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_49" />
+
+    <TextView
+        android:id="@+id/fire_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_fire_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_63"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_56" />
+
+    <TextView
+        android:id="@+id/mountain_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:lines="1"
+        android:text="@string/trigrams_mountain_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_70"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_63" />
+
+    <TextView
+        android:id="@+id/thunder_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_thunder_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_77"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_70" />
+
+    <TextView
+        android:id="@+id/earth_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_earth_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_84"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_77" />
+
+    <TextView
+        android:id="@+id/heaven_word"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_heaven_name"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_91"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintStart_toEndOf="@+id/water_symbol"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_v50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/water_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_10_dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_35" />
+
+    <TextView
+        android:id="@+id/wind_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_dp_x3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_42" />
+
+    <TextView
+        android:id="@+id/lake_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_hp_13"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_56"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_49" />
+
+    <TextView
+        android:id="@+id/fire_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_life_1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_56" />
+
+    <TextView
+        android:id="@+id/mountain_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_10_dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_63" />
+
+    <TextView
+        android:id="@+id/thunder_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_10_dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_77"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_70" />
+
+    <TextView
+        android:id="@+id/earth_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_20_dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_84"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_77" />
+
+    <TextView
+        android:id="@+id/heaven_effect"
+        style="@style/help_item_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/trigrams_effect_time_1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_91"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_help_v50"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <TextView
+        android:id="@+id/go_back"
+        style="@style/help_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_back"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_help_98"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_help_92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_help_98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <View
+        android:id="@+id/screen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

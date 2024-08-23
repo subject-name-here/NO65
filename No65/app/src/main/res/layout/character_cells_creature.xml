@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/character_cells"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cell0_creature"
+            style="@style/letter_cell_style_upper_edges"
+            android:gravity="bottom|end"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h50"
+            app:layout_constraintEnd_toStartOf="@id/guideline_v33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <TextView
+            android:id="@+id/cell1_creature"
+            style="@style/letter_cell_style_center"
+            android:background="#00000000"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:text="@string/creature_head"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_h50"
+            app:layout_constraintEnd_toStartOf="@+id/cell2_creature"
+            app:layout_constraintStart_toEndOf="@+id/cell0_creature"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <TextView
+            android:id="@+id/cell2_creature"
+            style="@style/letter_cell_style_upper_edges"
+            android:gravity="bottom|start"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v67"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_h50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <TextView
+            android:id="@+id/cell3_creature"
+            style="@style/letter_cell_style_center_edges"
+            android:gravity="end"
+            android:text="@string/creature_hand"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h50" />
+
+        <TextView
+            android:id="@+id/cell4_creature"
+            style="@style/letter_cell_style_center"
+            android:background="@drawable/stroke_back"
+            android:maxLines="1"
+            android:text="@string/creature_center_cell"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v67"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v33"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h50" />
+
+        <TextView
+            android:id="@+id/cell5_creature"
+            style="@style/letter_cell_style_center_edges"
+            android:gravity="end"
+            android:rotationY="180"
+            android:text="@string/creature_hand"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_h67"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v67"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_h67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <TextView
+            android:id="@+id/cell6_creature"
+            style="@style/letter_cell_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h67" />
+
+        <TextView
+            android:id="@+id/cell7_creature"
+            style="@style/letter_cell_style_center_edges"
+            android:text="@string/creature_legs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_v67"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v33"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h67" />
+
+        <TextView
+            android:id="@+id/cell8_creature"
+            style="@style/letter_cell_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_v67"
+            app:layout_constraintTop_toTopOf="@+id/guideline_h67" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

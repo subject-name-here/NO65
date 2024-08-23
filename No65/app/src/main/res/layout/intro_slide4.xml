@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slide4_lands"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/slide4_divider1"
+            style="@style/divider_vertical"
+            android:background="@color/white"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide4_guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/slide4_guideline_v33"
+            app:layout_constraintTop_toTopOf="@+id/slide4_guideline_h33" />
+
+        <View
+            android:id="@+id/slide4_divider2"
+            style="@style/divider_vertical"
+            android:background="@color/white"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide4_guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/slide4_guideline_v67"
+            app:layout_constraintTop_toTopOf="@+id/slide4_guideline_h33" />
+
+        <View
+            android:id="@+id/slide4_divider3"
+            style="@style/divider_horizontal"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide4_guideline_h33"
+            app:layout_constraintEnd_toStartOf="@+id/slide4_guideline_v67"
+            app:layout_constraintStart_toStartOf="@+id/slide4_guideline_v33" />
+
+        <View
+            android:id="@+id/slide4_divider4"
+            style="@style/divider_horizontal"
+            android:background="@color/white"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide4_guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/slide4_guideline_v67"
+            app:layout_constraintStart_toStartOf="@+id/slide4_guideline_v33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide4_guideline_h33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide4_guideline_v33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide4_guideline_h67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide4_guideline_v67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <include
+            android:id="@+id/slide4_cell"
+            layout="@layout/lands_cell"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide4_guideline_h67"
+            app:layout_constraintEnd_toStartOf="@+id/slide4_guideline_v67"
+            app:layout_constraintStart_toStartOf="@+id/slide4_guideline_v33"
+            app:layout_constraintTop_toTopOf="@+id/slide4_guideline_h33" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

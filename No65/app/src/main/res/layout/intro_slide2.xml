@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slide2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slide2_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_v_33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/slide2_v_67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <TextView
+            android:id="@+id/slide2_heaven"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/heaven_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_40"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_67"
+            app:layout_constraintStart_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintTop_toTopOf="@+id/slide2_25" />
+
+        <TextView
+            android:id="@+id/slide2_water"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/water_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_40"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/slide2_25" />
+
+        <TextView
+            android:id="@+id/slide2_earth"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/earth_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/slide2_v_67"
+            app:layout_constraintTop_toTopOf="@+id/slide2_25" />
+
+        <TextView
+            android:id="@+id/slide2_fire"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/fire_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_55"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/slide2_v_67"
+            app:layout_constraintTop_toTopOf="@+id/slide2_40" />
+
+        <TextView
+            android:id="@+id/slide2_wind"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/wind_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_55"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/slide2_40" />
+
+        <TextView
+            android:id="@+id/slide2_lake"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/lake_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_70"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_67"
+            app:layout_constraintStart_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintTop_toTopOf="@+id/slide2_55" />
+
+        <TextView
+            android:id="@+id/slide2_thunder"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/thunder_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_70"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/slide2_55" />
+
+        <TextView
+            android:id="@+id/slide2_mountain"
+            style="@style/slide2_trigram_style"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/mountain_trigram"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/slide2_lake"
+            app:layout_constraintTop_toTopOf="@+id/slide2_55" />
+
+        <include
+            android:id="@+id/include_slide1"
+            layout="@layout/intro_slide1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/slide2_55"
+            app:layout_constraintEnd_toStartOf="@+id/slide2_v_67"
+            app:layout_constraintStart_toStartOf="@+id/slide2_v_33"
+            app:layout_constraintTop_toTopOf="@+id/slide2_40" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
