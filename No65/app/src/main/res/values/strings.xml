@@ -12,7 +12,6 @@
     <string name="play_map">PLAY MAP</string>
     <string name="redact_map">REDACT MAP</string>
     <string name="empty_map">EMPTY MAP</string>
-    <string name="extras">EXTRAS</string>
     <string name="volume">VOLUME: %s</string>
     <string name="trigrams">TRIGRAMS</string>
     <string name="help">HELP</string>

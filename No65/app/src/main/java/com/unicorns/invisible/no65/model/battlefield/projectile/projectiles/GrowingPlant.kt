@@ -16,8 +16,8 @@ class GrowingPlant(
 
     override fun onTick(tickNumber: Int, battleField: BattleField) {
         super.onTick(tickNumber, battleField)
-        position.row = position.row % battleField.height
-        position.col = position.col % battleField.width
+        position.row %= battleField.height
+        position.col %= battleField.width
 
         when {
             position.row == -1 -> position.row = battleField.height - 1

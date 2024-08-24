@@ -6,7 +6,7 @@ import com.unicorns.invisible.no65.saveload.SaveManager
 
 class EventUnlockBattle(indices: List<Int>) : Event({ manager ->
     for (index in indices) {
-        SaveManager.unlockBattle(manager.activity, index)
+
     }
 }) {
     constructor(index: Int) : this(listOf(index))

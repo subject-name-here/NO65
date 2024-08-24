@@ -2,12 +2,10 @@ package com.unicorns.invisible.no65.saveload
 
 import android.annotation.SuppressLint
 import android.content.Context
-import com.unicorns.invisible.no65.ExtrasManager
 import com.unicorns.invisible.no65.MainActivity
 import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.init.InitData.Companion.INIT_MAP_INDEX
 import com.unicorns.invisible.no65.model.GameState65
-import com.unicorns.invisible.no65.model.GameStateBC
 import com.unicorns.invisible.no65.model.knowledge.Knowledge
 import com.unicorns.invisible.no65.model.lands.RegisteredCells
 import com.unicorns.invisible.no65.model.lands.map.LandsMap
@@ -51,16 +49,6 @@ class SaveManager {
                 .readText()
 
             return GameState65(jsonManager.decodeFromString(graphJson), INIT_MAP_INDEX)
-        }
-
-        fun loadInitStateWaterever(activity: MainActivity): GameStateBC {
-            val graphJson = activity
-                .resources
-                .openRawResource(R.raw.m_init_graph_wat)
-                .bufferedReader()
-                .readText()
-
-            return GameStateBC(jsonManager.decodeFromString(graphJson), INIT_MAP_INDEX)
         }
 
         fun saveExists(activity: MainActivity): Boolean {
@@ -111,33 +99,6 @@ class SaveManager {
                 return Knowledge()
             }
             return loadState(activity).knowledge
-        }
-
-        // EXTRAS BATTLES OPERATIONS
-
-        fun loadBattles(activity: MainActivity): String {
-            val file = getBattlesFile(activity)
-            return file.bufferedReader().readText()
-        }
-        fun unlockBattle(activity: MainActivity, index: Int) {
-            val file = getBattlesFile(activity)
-            val text = file.bufferedReader().readText()
-            val flags = text.split(" ").toMutableList()
-            if (index < flags.size) {
-                flags[index] = "1"
-                file.writeText(flags.joinToString(" "))
-            }
-        }
-        private fun getBattlesFile(activity: MainActivity): File {
-            return File(activity.filesDir, BATTLES_FILE_NAME).apply {
-                if (!exists()) { createNewFile(); fillBattlesFile(this) }
-            }
-        }
-        private fun fillBattlesFile(file: File) {
-            file.writeText(
-                MutableList(ExtrasManager.BATTLES_LIST.size) { "0" }
-                    .joinToString(" ")
-            )
         }
 
         private const val SAVE_FILE_NAME = "game_state.s65"

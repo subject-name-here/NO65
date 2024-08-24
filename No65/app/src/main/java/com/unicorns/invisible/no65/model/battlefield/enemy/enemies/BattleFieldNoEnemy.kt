@@ -306,7 +306,7 @@ class BattleFieldNoEnemy : BattleFieldEnemy() {
 
     private fun attack9(battleField: BattleField65) {
         // CHAOS-CHAOS-CHAOS!!!
-        val direction = BattleFieldProjectile.Direction.values().toList().random()
+        val direction = BattleFieldProjectile.Direction.entries.random()
         val isOntoProtagonist = randBoolean()
         val pPos = battleField.protagonist.position
         val coordinates = when (direction) {

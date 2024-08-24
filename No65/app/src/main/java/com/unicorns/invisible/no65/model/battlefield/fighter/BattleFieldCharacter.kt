@@ -47,7 +47,6 @@ abstract class BattleFieldCharacter : BattleFieldFighter() {
     open val tickTime: Long = PROJECTILE_SPEED_MILLISECONDS
     open val isHealthInfinite = false
     open val isRequiemProof = false
-    open var secondChanceState = SecondChanceState.NO_SECOND_CHANCE
     open val timebackDenied = false
 
     open val lineGeneratorJournalOverride = false
@@ -58,17 +57,4 @@ abstract class BattleFieldCharacter : BattleFieldFighter() {
     open fun onMoveStart(battleField: BattleField) {}
     open fun onTick(manager: BattleManager, tickNumber: Int) {}
     open fun onMoveRepeat(battleField: BattleField) {}
-
-    open suspend fun onAttackEnd(manager: BattleManager) {}
-
-    // About Second Chance: it doesn't swap attacks when protagonist is 65.
-    open suspend fun onSecondChanceUsage(manager: BattleManager) {}
-
-    open suspend fun onFieryAnkhUsage(manager: BattleManager) {}
-
-    enum class SecondChanceState {
-        NO_SECOND_CHANCE,
-        HAS_SECOND_CHANCE,
-        USED_SECOND_CHANCE
-    }
 }

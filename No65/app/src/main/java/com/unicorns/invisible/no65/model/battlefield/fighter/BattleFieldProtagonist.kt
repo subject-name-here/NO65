@@ -8,14 +8,13 @@ import kotlin.math.min
 
 
 class BattleFieldProtagonist(
-    val knowledge: Knowledge,
-    private val isInverted: Boolean = false
+    val knowledge: Knowledge
 ) : BattleFieldFighter() {
     override var maxHealth: Int = BASIC_HEALTH
     override var health: Int = maxHealth
 
     override fun getString() = "@"
-    override fun getStringColor(): Int = if (isInverted) R.color.white else R.color.black
+    override fun getStringColor(): Int = R.color.black
     override fun onTick(tickNumber: Int, battleField: BattleField) {}
 
     var multiplier: Int = 1

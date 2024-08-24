@@ -45,7 +45,6 @@ class BattleFieldApproach : BattleFieldEnemy() {
         override fun getVictoryLine(): Int = R.string.battlefield_approach_v
     }
 
-
     override fun onTick(battleField: BattleField65, tickNumber: Int) {
         when (battleField.moveNumber % 2) {
             0 -> {

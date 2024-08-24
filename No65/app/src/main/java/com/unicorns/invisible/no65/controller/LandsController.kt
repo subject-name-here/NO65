@@ -23,7 +23,6 @@ class LandsController(
 
     val onChangeMoveModeListeners: MutableList<() -> Unit> = ArrayList()
     val onChangeInteractionModeListeners: MutableList<() -> Unit> = ArrayList()
-    val onRewindListeners: MutableList<() -> Unit> = ArrayList()
 
     private fun initListener(button: TextView, listenersList: MutableList<() -> Unit>) {
         setListener(button) {
@@ -38,7 +37,6 @@ class LandsController(
 
         initListener(binding.changeMoveMode, onChangeMoveModeListeners)
         initListener(binding.changeInteractionMode, onChangeInteractionModeListeners)
-        initListener(binding.rewind, onRewindListeners)
     }
 
     @SuppressLint("ClickableViewAccessibility")

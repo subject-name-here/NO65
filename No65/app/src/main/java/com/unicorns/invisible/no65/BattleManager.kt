@@ -6,16 +6,13 @@ import com.quickbirdstudios.nonEmptyCollection.toNonEmptyListOrNull
 import com.unicorns.invisible.no65.controller.BattleFieldController
 import com.unicorns.invisible.no65.controller.BattleFieldControllerStandard
 import com.unicorns.invisible.no65.databinding.ActivityBattleBinding
-import com.unicorns.invisible.no65.databinding.ActivityBattleEqualBinding
 import com.unicorns.invisible.no65.model.BattleResult
 import com.unicorns.invisible.no65.model.battlefield.AttackResult
 import com.unicorns.invisible.no65.model.battlefield.BattleField65
-import com.unicorns.invisible.no65.model.battlefield.BattleFieldEqual
 import com.unicorns.invisible.no65.model.battlefield.elements.TrigramAggregator
 import com.unicorns.invisible.no65.model.battlefield.enemy.BattleFieldEnemy
 import com.unicorns.invisible.no65.model.battlefield.enemy.BattleFieldLineGenerator
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldCharacter
-import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldCharacterEqual
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldFighter
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldProtagonist
 import com.unicorns.invisible.no65.model.battlefield.projectile.BattleFieldProjectile
@@ -27,7 +24,6 @@ import com.unicorns.invisible.no65.view.music.MusicPlayer
 import kotlinx.coroutines.*
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
-import kotlin.properties.Delegates
 
 
 class BattleManager(
@@ -35,7 +31,6 @@ class BattleManager(
     private val protagonist: BattleFieldFighter,
     private val enemiesPool: NonEmptyList<BattleFieldCharacter>,
     private val managerMode: Mode = Mode.STANDARD,
-    private val isEnemyAttackingFirst: Boolean = true,
     private val fieldWidth: Int = FIELD_WIDTH,
     private val fieldHeight: Int = FIELD_HEIGHT,
     private val afterBattleCallback: (BattleResult) -> Unit,
@@ -54,31 +49,18 @@ class BattleManager(
                 val standardBinding = binding as ActivityBattleBinding
                 BattleFieldDrawerTheCreature(activity, fieldWidth, fieldHeight, standardBinding)
             }
-            Mode.EQUAL -> {
-                val equalBinding = binding as ActivityBattleEqualBinding
-                BattleFieldDrawerEqual(activity, fieldWidth, fieldHeight, equalBinding)
-            }
         }
     }
 
     val controller: BattleFieldController by lazy {
-        if (managerMode.isStandard()) {
-            val standardDrawer = drawer as BattleFieldDrawerStandard
-            BattleFieldControllerStandard(
-                activity,
-                drawer.field,
-                drawer.giveUpButton,
-                standardDrawer.elementsLinearLayout,
-                drawer.enemyCentreCell
-            )
-        } else {
-            BattleFieldController(
-                activity,
-                drawer.field,
-                drawer.giveUpButton,
-                drawer.enemyCentreCell
-            )
-        }
+        val standardDrawer = drawer as BattleFieldDrawerStandard
+        BattleFieldControllerStandard(
+            activity,
+            drawer.field,
+            drawer.giveUpButton,
+            standardDrawer.elementsLinearLayout,
+            drawer.enemyCentreCell
+        )
     }
 
     private val enemy = enemiesPool.first()
@@ -86,65 +68,14 @@ class BattleManager(
     private val aggregator = TrigramAggregator()
 
     private val battleFieldLock = ReentrantLock()
-    val battleField =
-        if (managerMode.isStandard()) {
-            BattleField65(
-                fieldWidth,
-                fieldHeight,
-                protagonist as BattleFieldProtagonist,
-                enemy as BattleFieldEnemy
-            )
-        } else {
-            BattleFieldEqual(
-                fieldWidth,
-                fieldHeight,
-                protagonist,
-                enemy
-            )
-        }
+    val battleField = BattleField65(
+        fieldWidth,
+        fieldHeight,
+        protagonist as BattleFieldProtagonist,
+        enemy as BattleFieldEnemy
+    )
 
-    private var fieldJob: Job? = null
-    private fun cancelFieldJob() {
-        fieldJob?.cancel()
-        fieldJob = null
-    }
-    private var elementsJob: Job? = null
-    private fun cancelElementsJob() {
-        elementsJob?.cancel()
-        elementsJob = null
-    }
-
-    private var state: BattleState by Delegates.observable(BattleState.NONE) { _, _, new ->
-        val isSwapped = battleField.areAttacksSwapped()
-        fun getDefaultAttacker() = if (!isSwapped) enemy else protagonist
-        fun getDefaultDefender() = if (!isSwapped) protagonist else enemy
-
-        when (new) {
-            BattleState.BATTLEFIELD -> {
-                attacker = getDefaultAttacker()
-                defender = getDefaultDefender()
-            }
-            BattleState.ELEMENTS, BattleState.BATTLEFIELD_REVERSED -> {
-                attacker = getDefaultDefender()
-                defender = getDefaultAttacker()
-            }
-            BattleState.NONE -> {
-                attacker = getDefaultAttacker()
-                defender = getDefaultDefender()
-
-                cancelFieldJob()
-                cancelElementsJob()
-            }
-        }
-    }
-    private var attacker: BattleFieldFighter = enemy
-    private var defender: BattleFieldFighter = protagonist
-
-    private val binding: ViewBinding = if (managerMode.isStandard()) {
-        ActivityBattleBinding.inflate(activity.layoutInflater)
-    } else {
-        ActivityBattleEqualBinding.inflate(activity.layoutInflater)
-    }
+    private val binding: ViewBinding = ActivityBattleBinding.inflate(activity.layoutInflater)
 
     private suspend fun init() = launchCoroutineOnMain {
         activity.setContentView(binding.root)
@@ -160,6 +91,14 @@ class BattleManager(
         }
     }
 
+    private enum class BattleFieldState {
+        BATTLEFIELD,
+        ELEMENTS,
+        OTHER,
+    }
+    private var state = BattleFieldState.OTHER
+
+    private var mainJob: Job? = null
     suspend fun launchBattle() {
         init().join()
 
@@ -172,44 +111,38 @@ class BattleManager(
 
         drawer.hideLoadingLayout().join()
 
-        coroutineScope { launch {
-            delay(enemy.beforeCountdownDelay)
+        delay(enemy.beforeCountdownDelay)
 
-            enemy.goNumbersToDelays.forEach { numberToDelay ->
-                activity.musicPlayer.playMusicSuspendTillStart(enemy.beatId)
-                drawer.writeInBattleOverCell(numberToDelay.first.toString())
-                delay(numberToDelay.second)
-            }
+        enemy.goNumbersToDelays.forEach { numberToDelay ->
+            activity.musicPlayer.playMusicSuspendTillStart(enemy.beatId)
+            drawer.writeInBattleOverCell(numberToDelay.first.toString())
+            delay(numberToDelay.second)
+        }
 
-            if (enemy.goText != "") {
-                activity.musicPlayer.playMusicSuspendTillStart(enemy.beatId)
-                drawer.writeInBattleOverCell(enemy.goText)
-                delay(enemy.afterGoTextDelay)
-            }
-            drawer.clearBattleOverCell()
+        if (enemy.goText != "") {
+            activity.musicPlayer.playMusicSuspendTillStart(enemy.beatId)
+            drawer.writeInBattleOverCell(enemy.goText)
+            delay(enemy.afterGoTextDelay)
+        }
+        drawer.clearBattleOverCell()
 
-            enemy.onBattleBegins(this@BattleManager)
-            beginGame()
-        } }
-    }
+        enemy.onBattleBegins(this@BattleManager)
 
-    private suspend fun beginGame() {
         activity.musicPlayer.playMusic(enemy.musicThemeId, isLooping = true)
         drawer.animateEnemy(enemy.animation)
-        if (drawer is BattleFieldDrawerEqual) {
-            val drawerEqual = drawer as BattleFieldDrawerEqual
-            drawerEqual.animateProtagonist((protagonist as BattleFieldCharacterEqual).animation)
-        }
 
         addProtagonistMovementListener()
-        if (managerMode.isStandard()) {
-            addElementsListener()
-        }
-
-        if (managerMode.isStandard() || isEnemyAttackingFirst) {
-            proceedToField()
-        } else {
-            proceedToFieldReversed()
+        addElementsListener()
+        launchMainJob()
+    }
+    private fun launchMainJob() {
+        mainJob = launchCoroutineOnDefault {
+            while (isActive) {
+                proceedToField()
+                onFieldEnd()
+                proceedToElements()
+                onElementsEnd()
+            }
         }
     }
 
@@ -217,19 +150,10 @@ class BattleManager(
         controller.addListenersForButtons { coordinates, numberOfTaps ->
             val shuffledCoordinates = Coordinates(battleField.rowsOrder.indexOf(coordinates.row), coordinates.col)
             when (state) {
-                BattleState.BATTLEFIELD -> {
+                BattleFieldState.BATTLEFIELD -> {
                     if (numberOfTaps == enemy.numberOfTaps) {
                         battleFieldLock.withLock {
                             battleField.changeProtagonistCoordinates(shuffledCoordinates)
-                            onFieldChange()
-                        }
-                    }
-                }
-                BattleState.BATTLEFIELD_REVERSED -> {
-                    if (numberOfTaps == enemy.numberOfTaps) {
-                        battleFieldLock.withLock {
-                            val attacker = attacker as BattleFieldCharacterEqual
-                            attacker.onTapAttack(shuffledCoordinates, battleField)
                             onFieldChange()
                         }
                     }
@@ -242,8 +166,7 @@ class BattleManager(
         val controllerStandard = controller
         if (controllerStandard !is BattleFieldControllerStandard) return
         controllerStandard.addListenersForElementsLayout { type ->
-            if (state != BattleState.ELEMENTS) return@addListenersForElementsLayout
-
+            if (state != BattleFieldState.ELEMENTS) return@addListenersForElementsLayout
             val monogram = MonogramGestureBijection.getMonogram(type)
             aggregator.take(monogram)
 
@@ -252,39 +175,19 @@ class BattleManager(
                 aggregator.getLastMonogramNumber(),
                 monogram.getSymbol()
             )
-
-            if (aggregator.hasTrigram()) {
-                launchCoroutine {
-                    onElementsEnd(
-                        drawerStandard,
-                        protagonist as BattleFieldProtagonist,
-                        enemy as BattleFieldEnemy,
-                        battleField as BattleField65,
-                    )
-                }
-            }
         }
     }
 
     private var lineId: Int = 0
-    private suspend fun proceedToField() { coroutineScope { launch {
+    private suspend fun proceedToField() {
         battleField.onEnemyMoveStart()
 
-        val isTakingFromJournal = battleField is BattleField65 && battleField.takeFromJournal
+        val isTakingFromJournal = battleField.takeFromJournal
         if (!isTakingFromJournal) {
-            if (!battleField.areAttacksSwapped()) {
-                enemy.onMoveStart(battleField)
-            } else {
-                if (protagonist is BattleFieldCharacter) {
-                    protagonist.onMoveStart(battleField)
-                }
-            }
+            enemy.onMoveStart(battleField)
         }
 
-        if (checkBattleOver()) {
-            onBattleOver()
-            return@launch
-        }
+        checkpoint()
 
         drawer.stopSpeechBubble()
         if (!isTakingFromJournal || enemy.lineGeneratorJournalOverride) {
@@ -293,8 +196,7 @@ class BattleManager(
         drawer.showTextInEnemySpeechBubble(lineId)
 
         if (enemy.attackTimeMvs == 0) {
-            onFieldEnd()
-            return@launch
+            return
         }
 
         battleField.sendProtagonistToCenter()
@@ -303,31 +205,24 @@ class BattleManager(
         drawer.showField()
         drawer.updateEnemyPanel(enemy)
 
-        startFieldJob()
-    } } }
-    private fun startFieldJob() {
-        state = BattleState.BATTLEFIELD
-        fieldJob = launchCoroutine {
-            repeat(enemy.attackTimeMvs) {
-                onTickField(it)
-                delay(enemy.tickTime)
-            }
-            onFieldEnd()
+        state = BattleFieldState.BATTLEFIELD
+        repeat(enemy.attackTimeMvs) {
+            onTickField(it)
+            delay(enemy.tickTime)
         }
+        state = BattleFieldState.OTHER
     }
+
     private fun onTickField(numberOfInvocation: Int) {
         val progress = getShiftedProgressPercentage(numberOfInvocation, enemy.attackTimeMvs)
         drawer.setEnemyProgressBarPercentage(progress, enemy.tickTime)
 
         battleFieldLock.withLock {
-            if (battleField is BattleField65) {
-                battleField.preTickField()
-            }
-            val isTakingFromJournal = battleField is BattleField65 && battleField.takeFromJournal
+            battleField.preTickField()
+            val isTakingFromJournal = battleField.takeFromJournal
 
-            val currentAttacker = attacker
             if (!isTakingFromJournal) {
-                currentAttacker.onTick(numberOfInvocation, battleField)
+                enemy.onTick(numberOfInvocation, battleField)
             }
             enemy.onTick(this, numberOfInvocation)
 
@@ -343,7 +238,7 @@ class BattleManager(
 
             battleField.setFieldPlayable()
 
-            if (!isTakingFromJournal && battleField is BattleField65) {
+            if (!isTakingFromJournal) {
                 battleField.saveField()
             }
 
@@ -352,27 +247,14 @@ class BattleManager(
     }
     private fun onFieldChange() {
         drawer.drawField(battleField)
-
-        if (checkBattleOver()) {
-            onBattleOver()
-        }
+        checkpoint()
     }
     private suspend fun onFieldEnd() {
-        state = BattleState.NONE
-
         battleField.onEnemyMoveEnd()
 
         battleField.clear()
         drawer.drawField(battleField)
         drawer.hideAll()
-
-        enemy.onAttackEnd(this@BattleManager)
-
-        if (managerMode.isStandard()) {
-            proceedToElements()
-        } else {
-            proceedToFieldReversed()
-        }
     }
 
 
@@ -385,27 +267,23 @@ class BattleManager(
         val battleField65 = battleField as BattleField65
 
         if (enemy65.defenceTimeSec == 0) {
-            onElementsEnd(drawerStandard, protagonist65, enemy65, battleField65)
             return
         }
         drawerStandard.showElements()
-        startElementsJob(drawerStandard, protagonist65, enemy65, battleField65)
-    }
-    private fun startElementsJob(
-        drawerStandard: BattleFieldDrawerStandard,
-        protagonist65: BattleFieldProtagonist,
-        enemy65: BattleFieldEnemy,
-        battleField65: BattleField65
-    ) {
-        state = BattleState.ELEMENTS
+
+        state = BattleFieldState.ELEMENTS
         val elementsCalls = (enemy65.defenceTimeSec * 1000L / ELEMENTS_PROGRESS_BAR_TICK_TIME).toInt()
-        elementsJob = launchCoroutine {
-            repeat(elementsCalls) {
-                updateElementsProgressBar(it, elementsCalls)
-                delay(ELEMENTS_PROGRESS_BAR_TICK_TIME)
+        repeat(elementsCalls) {
+            updateElementsProgressBar(it, elementsCalls)
+            delay(ELEMENTS_PROGRESS_BAR_TICK_TIME)
+            if (aggregator.hasTrigram()) {
+                state = BattleFieldState.OTHER
+                processTrigram(drawerStandard, protagonist65, enemy65, battleField65)
+                return
             }
-            onElementsEnd(drawerStandard, protagonist65, enemy65, battleField65)
         }
+        state = BattleFieldState.OTHER
+        processTrigram(drawerStandard, protagonist65, enemy65, battleField65)
     }
     private val updateElementsProgressBar: (Int, Int) -> Unit = { numberOfInvocation, elementsCalls ->
         drawer.setEnemyProgressBarPercentage(
@@ -414,22 +292,6 @@ class BattleManager(
         )
     }
 
-    private suspend fun onElementsEnd(
-        drawerStandard: BattleFieldDrawerStandard,
-        protagonist65: BattleFieldProtagonist,
-        enemy65: BattleFieldEnemy,
-        battleField65: BattleField65
-    ) {
-        state = BattleState.NONE
-        processTrigram(drawerStandard, protagonist65, enemy65, battleField65)
-        aggregator.clear()
-        drawerStandard.clearElements()
-        if (checkBattleOver()) {
-            onBattleOver()
-            return
-        }
-        proceedToField()
-    }
     private suspend fun processTrigram(
         drawerStandard: BattleFieldDrawerStandard,
         protagonist65: BattleFieldProtagonist,
@@ -490,103 +352,22 @@ class BattleManager(
         }
     }
 
+    private fun onElementsEnd() {
+        checkpoint()
+        aggregator.clear()
+        (drawer as BattleFieldDrawerStandard).clearElements()
+    }
+
     // ELEMENTS ARE OVER
 
-    // FIELD REVERSED FUNCTIONS
-
-    private suspend fun proceedToFieldReversed() {
-        val protagonistEqual = protagonist as BattleFieldCharacterEqual
-        val drawerEqual = drawer as BattleFieldDrawerEqual
-
-        drawerEqual.stopSpeechBubble()
-        drawerEqual.showTextInProtagonistSpeechBubble(
-            getProtagonistLineGenerator().getLine(battleField.moveNumber)
-        )
-
-        if (protagonist.attackTimeMvs == 0) {
-            onFieldReversedEnd()
-            return
-        }
-
-        delay(1000L)
-
-        drawerEqual.apply {
-            setProtagonistProgressBarPercentage(0, 0)
-            showFieldReversed()
-        }
-
-        battleField.addFighter(enemy)
-        battleField.sendEnemyToCenter()
-
-        if (battleField.areAttacksSwapped()) {
-            (enemy as BattleFieldCharacterEqual).onMoveReversedStart(battleField)
-        } else {
-            protagonistEqual.onMoveReversedStart(battleField)
-        }
-
-        startFieldReversedJob(protagonistEqual)
-    }
-
-    private fun startFieldReversedJob(protagonistEqual: BattleFieldCharacterEqual) {
-        state = BattleState.BATTLEFIELD_REVERSED
-        val defenderEqual = defender as BattleFieldCharacterEqual
-
-        fieldJob = launchCoroutineOnDefault {
-            defenderEqual.defend(battleField)
-            repeat(protagonistEqual.attackTimeMvs) {
-                onTickFieldReversed(it, protagonistEqual)
-                delay(protagonistEqual.tickTime)
-            }
-            defenderEqual.stopDefending()
-            onFieldReversedEnd()
-        }
-    }
-    private fun onTickFieldReversed(numberOfInvocation: Int, protagonistEqual: BattleFieldCharacterEqual) {
-        val progress = getShiftedProgressPercentage(numberOfInvocation, protagonistEqual.attackTimeMvs)
-        (drawer as BattleFieldDrawerEqual).setProtagonistProgressBarPercentage(progress, protagonistEqual.tickTime)
-
-        battleFieldLock.withLock {
-            protagonistEqual.onTick(this, numberOfInvocation)
-
-            for (i in 0 until protagonistEqual.projectilePassesCellsPerMove) {
-                battleField.getAllObjects()
-                    .filterIsInstance<BattleFieldProjectile>()
-                    .forEach { battleFieldObject ->
-                        battleFieldObject.onTick(numberOfInvocation, battleField)
-                    }
-            }
-
-            battleField.setFieldPlayable()
-
-            onFieldChange()
+    private fun checkpoint() {
+        if (protagonist.health <= 0 || enemy.health <= 0) {
+            onBattleOver()
         }
     }
 
-    private suspend fun onFieldReversedEnd() {
-        state = BattleState.NONE
-
-        battleField.clear()
-        drawer.drawField(battleField)
-        drawer.hideAll()
-
-        delay(1000L)
-
-        (protagonist as BattleFieldCharacterEqual).onAttackEnd(this@BattleManager)
-
-        proceedToField()
-    }
-
-    // FIELD REVERSED IS OVER
-
-    private fun checkBattleOver(): Boolean {
-        return protagonist.health <= 0 || enemy.health <= 0
-    }
     private fun onBattleOver() {
-        state = BattleState.NONE
-        if (managerMode == Mode.EQUAL) {
-            (enemy as BattleFieldCharacterEqual).stopDefending()
-            (protagonist as BattleFieldCharacterEqual).stopDefending()
-        }
+        mainJob?.cancel()
 
         if (protagonist is BattleFieldProtagonist) {
             if (protagonist.health <= 0 && protagonist.hasAnkh) {
@@ -595,18 +376,9 @@ class BattleManager(
             }
         }
 
-        if (enemy.health <= 0 && enemy.secondChanceState == BattleFieldCharacter.SecondChanceState.HAS_SECOND_CHANCE) {
-            secondChanceResetStage()
-            return
-        }
-
         drawer.hideAll()
         drawer.stopSpeechBubble()
         drawer.stopEnemyAnimation()
-        if (drawer is BattleFieldDrawerEqual) {
-            val drawerStandard = drawer as BattleFieldDrawerEqual
-            drawerStandard.stopProtagonistAnimation()
-        }
         drawer.updateEnemy(enemy)
         drawer.updateProtagonist(protagonist)
 
@@ -667,10 +439,8 @@ class BattleManager(
 
     private fun ankhResetStage() {
         launchCoroutine {
-            enemy.onFieryAnkhUsage(this@BattleManager)
-
             drawer.showBlackScreen()
-            val battleField65 = battleField as BattleField65
+            val battleField65 = battleField
             battleField65.ankhRestart()
             battleField65.protagonist.hasAnkh = false
             drawer.updateEnemy(enemy)
@@ -682,42 +452,7 @@ class BattleManager(
                 isLooping = false
             )
             drawer.stopBlackScreen()
-            proceedToField()
-        }
-    }
-
-    private fun secondChanceResetStage() {
-        battleField.clear()
-        drawer.pauseEnemyAnimation()
-        activity.musicPlayer.stopAllMusic()
-        drawer.setEnemyProgressBarPercentage(0, 0)
-        if (drawer is BattleFieldDrawerEqual) {
-            val equalDrawer = drawer as BattleFieldDrawerEqual
-            equalDrawer.setProtagonistProgressBarPercentage(0, 0)
-        }
-        drawer.hideAll()
-
-        launchCoroutine {
-            enemy.onSecondChanceUsage(this@BattleManager)
-
-            enemy.secondChanceState = BattleFieldCharacter.SecondChanceState.USED_SECOND_CHANCE
-            enemy.health = enemy.maxHealth
-            drawer.updateEnemy(enemy)
-            drawer.updateProtagonist(protagonist)
-
-            activity.musicPlayer.playMusicSuspendTillEnd(
-                R.raw.sfx_second_chance,
-                behaviour = MusicPlayer.MusicBehaviour.STOP_ALL,
-                isLooping = false
-            )
-
-            drawer.resumeEnemyAnimation()
-            activity.musicPlayer.playMusic(
-                enemy.musicThemeId,
-                behaviour = MusicPlayer.MusicBehaviour.STOP_ALL,
-                isLooping = true
-            )
-            proceedToField()
+            launchMainJob()
         }
     }
 
@@ -725,32 +460,15 @@ class BattleManager(
         return if (enemy is BattleFieldEnemy) {
             enemy.lineGenerator
         } else {
-            (enemy as BattleFieldCharacterEqual).getLineGenerator(protagonist as BattleFieldCharacterEqual)
-        }
-    }
-    private fun getProtagonistLineGenerator(): BattleFieldLineGenerator {
-        return if (protagonist is BattleFieldCharacterEqual) {
-            protagonist.getLineGenerator(enemy as BattleFieldCharacterEqual)
-        } else {
             BattleFieldLineGenerator.EMPTY
         }
-    }
-
-    private enum class BattleState {
-        ELEMENTS,
-        BATTLEFIELD,
-        BATTLEFIELD_REVERSED,
-        NONE
     }
 
     enum class Mode {
         STANDARD,
         STANDARD_TUTORIAL,
         STANDARD_D99,
-        STANDARD_THE_CREATURE,
-        EQUAL;
-
-        fun isStandard(): Boolean = this != EQUAL
+        STANDARD_THE_CREATURE;
     }
 
     companion object {

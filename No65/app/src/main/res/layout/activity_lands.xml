@@ -237,17 +237,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/rewind"
-                style="@style/lands_action_style"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:text="@string/rewind_symbol"
-                app:layout_constraintBottom_toTopOf="@+id/go_back"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
                 android:id="@+id/go_back"
                 style="@style/lands_action_style"
                 android:layout_width="0dp"
@@ -256,7 +245,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rewind" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

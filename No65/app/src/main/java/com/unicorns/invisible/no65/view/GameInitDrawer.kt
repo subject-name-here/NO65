@@ -14,8 +14,6 @@ class GameInitDrawer(
 ) : FadeDrawer {
     private val goBackButton
         get() = binding.goBack
-    private val rewind
-        get() = binding.rewind
     private val cdp
         get() = binding.cdp
     private val cdpUses
@@ -41,7 +39,6 @@ class GameInitDrawer(
 
     fun showControls() = launchCoroutineOnMain {
         goBackButton.text = activity.getString(R.string.go_back_symbol)
-        rewind.text = activity.getString(R.string.rewind_symbol)
         cdp.visibility = View.VISIBLE
         cdpUses.visibility = View.INVISIBLE
         changeMoveMode.text = activity.getString(R.string.action_walk_symbol)
@@ -52,7 +49,6 @@ class GameInitDrawer(
     
     fun showControlsExplained() = launchCoroutineOnMain {
         goBackButton.text = activity.getString(R.string.go_back_button_explained)
-        rewind.text = activity.getString(R.string.rewind_button_explained)
         cdp.visibility = View.INVISIBLE
         cdpUses.visibility = View.VISIBLE
         changeMoveMode.text = activity.getString(R.string.change_move_mode_button_explained)

@@ -19,6 +19,6 @@ class CrazyDiamond(
     override fun onTick(tickNumber: Int, battleField: BattleField) {
         super.onTick(tickNumber, battleField)
 
-        direction = Direction.values().random()
+        direction = Direction.entries.random()
     }
 }

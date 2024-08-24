@@ -185,10 +185,8 @@ class AttributionsManager(
     }
 
     override fun exit() {
-        launchCoroutine {
-            currentJob?.cancel()
-            drawer.stop()
-            super.exit()
-        }
+        currentJob?.cancel()
+        drawer.stop()
+        super.exit()
     }
 }

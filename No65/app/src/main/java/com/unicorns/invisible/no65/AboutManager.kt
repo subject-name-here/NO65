@@ -21,6 +21,5 @@ class AboutManager(
 
     override fun setupContent() {
         drawer.setEmailLink()
-        drawer.setTwitterLink()
     }
 }

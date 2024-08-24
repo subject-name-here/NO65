@@ -45,7 +45,6 @@ class MainActivity : RootActivity(), MenuItemManager {
         ::redactMapListener,
         ::playMapListener,
         ::volumeListener,
-        ::showExtras,
         ::showHelp,
         ::showAttributions,
         ::showAbout,
@@ -241,13 +240,6 @@ class MainActivity : RootActivity(), MenuItemManager {
             drawer.fadeToBlack(duration = 500L).join()
             musicPlayer.stopAllMusic()
             CreatorManager(this@MainActivity, map).start()
-        }
-    }
-
-    private fun showExtras() {
-        launchCoroutineOnMain {
-            drawer.fadeToWhite().join()
-            ExtrasManager(this@MainActivity).launch()
         }
     }
 

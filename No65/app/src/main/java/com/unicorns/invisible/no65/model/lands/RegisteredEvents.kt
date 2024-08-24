@@ -8,8 +8,6 @@ import com.unicorns.invisible.no65.model.lands.event.events.location.*
 import com.unicorns.invisible.no65.model.lands.event.events.placed.*
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventEnteredTemple
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventLeftRHQHall
-import com.unicorns.invisible.no65.model.lands.event.events.util.EventWaterAddonAvailable
-import com.unicorns.invisible.no65.model.lands.event.events.waterever.EventAbysmalWaterAndBC
 import com.unicorns.invisible.no65.util.Coordinates
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
@@ -57,7 +55,6 @@ class RegisteredEvents {
         "map_tpl_all" to EventEnteredTemple(),
         "map_mac_guf" to EventMacGuf(),
         "map_fin" to EventFin(),
-        "map_wat_abh" to EventAbysmalWaterAndBC(),
     )
     private val onMapEnterEventsFlags = onMapEnterEvents.keys.associateWith { false }.toMutableMap()
     fun getOnMapEnterEvent(mapIndex: String): Event = masterLock.withLock {
@@ -77,9 +74,6 @@ class RegisteredEvents {
         OnStepEventKey("map_fst_sf3", Coordinates(0, -6)) to EventSF3Stuck(),
         OnStepEventKey("map_fst_sf4", Coordinates(1, 5)) to EventSF4JumpTutorial(),
         OnStepEventKey("map_fst_sf4", Coordinates(1, 4)) to EventSF4JumpTutorial(),
-        OnStepEventKey("map_fst_sf5_new", Coordinates(11, 2)) to EventSF5RewindTutorial1(),
-        OnStepEventKey("map_fst_sf5_new", Coordinates(11, 3)) to EventSF5RewindTutorial2(),
-        OnStepEventKey("map_fst_sf5_new", Coordinates(11, 4)) to EventSF5RewindTutorial2(),
         OnStepEventKey("map_fst_sf6", Coordinates(17, 0)) to EventOppressionAppears(),
         OnStepEventKey("map_fst_sf8", Coordinates(2, 10)) to EventOppressionChase(),
         OnStepEventKey("map_fst_sf8", Coordinates(4, 50)) to EventChaseOver(),
@@ -127,7 +121,6 @@ class RegisteredEvents {
         OnUseEventKey("map_str_53", Coordinates(-5, -1)) to EventTreadingGraffitiWarning(),
         OnUseEventKey("map_rev_ch2", Coordinates(-3, 0)) to EventRevCh2Save(),
         OnUseEventKey("map_jal_of2_rev", Coordinates(-2, 1)) to EventSave(),
-        OnUseEventKey("map_tpl_off", Coordinates(4, -2)) to EventWaterAddonAvailable(),
     )
     val onUseEventsFlags = onUseEvents.keys.associateWith { false }.toMutableMap()
     fun getOnUseEvent(mapIndex: String, coordinates: Coordinates): Event = masterLock.withLock {

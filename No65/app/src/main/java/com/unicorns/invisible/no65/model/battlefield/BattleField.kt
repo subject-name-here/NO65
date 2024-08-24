@@ -1,7 +1,6 @@
 package com.unicorns.invisible.no65.model.battlefield
 
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldCharacter
-import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldCharacterEqual
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldFighter
 import com.unicorns.invisible.no65.model.battlefield.projectile.BattleFieldProjectile
 import com.unicorns.invisible.no65.util.Coordinates
@@ -112,20 +111,9 @@ abstract class BattleField(
         protagonist.position = coordinates
         addFighter(protagonist)
     }
-    fun changeEnemyCoordinates(coordinates: Coordinates) {
-        removeRaw(enemy)
-        enemy.position = coordinates
-        addFighter(enemy)
-    }
 
     fun getCenterCoordinates() = Coordinates(height, width) / 2
     fun sendProtagonistToCenter() = changeProtagonistCoordinates(getCenterCoordinates())
-    fun sendEnemyToCenter() = changeEnemyCoordinates(getCenterCoordinates())
-
-    fun areAttacksSwapped(): Boolean {
-        return enemy is BattleFieldCharacterEqual &&
-                enemy.secondChanceState == BattleFieldCharacter.SecondChanceState.USED_SECOND_CHANCE
-    }
 
     fun getAllObjects() = rwMapLock.read { coordinatesToObject.values.toList() }
     fun getMap(): Map<Coordinates, BattleFieldObject> = rwMapLock.read { coordinatesToObject.toMap() }

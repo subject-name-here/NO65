@@ -12,7 +12,7 @@ import com.unicorns.invisible.no65.util.CellUtils
 import kotlinx.serialization.Serializable
 
 @Serializable
-class SkillBookMountain(override var cellBelow: Cell): SkillBook(), CellControl {
+class SkillBookMountain(override var cellBelow: Cell): SkillBook() {
     override val symbolColor
         get() = R.color.white
     override val backgroundColor
@@ -23,17 +23,4 @@ class SkillBookMountain(override var cellBelow: Cell): SkillBook(), CellControl 
 
     override val acquiredEvent
         get() = EventAvalancheAcquired(this)
-
-    override fun onTickWithEvent(tick: Int): Event = EventFactory.createWithNext { manager ->
-        if (manager.gameState.currentMapIndex != "map_jal_of2") return@createWithNext Event.Null
-
-        if (this@SkillBookMountain !in CellUtils.getCellsInSight(manager)) {
-            val coordinatesToReappear = CellUtils.findCurrentMapClosestFloor(manager, this@SkillBookMountain)
-            if (coordinatesToReappear != null) {
-                return@createWithNext EventTeleport(-1, coordinatesToReappear, manager.gameState.protagonist)
-                    .then(EventShowMessages(listOf(R.string.lands_skill_book_mountain_force_pick_up)))
-            }
-        }
-        Event.Null
-    }
 }

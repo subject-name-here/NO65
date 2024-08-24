@@ -240,7 +240,7 @@ class BattleFieldD99 : BattleFieldEnemy() {
             }
 
             repeat(numberOfAdditionalBags) {
-                val col = colsList.removeFirst()
+                val col = colsList.removeAt(0)
                 addBagDown(battleField, col)
             }
         }

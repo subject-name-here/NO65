@@ -21,8 +21,6 @@ class AboutDrawer(
 
     private val emailTextView: TextView
         get() = binding.aboutContact
-    private val twitterTextView: TextView
-        get() = binding.aboutTwitter
 
     private fun TextView.setHyperlinkStyle() {
         val spannable = SpannableString(text)
@@ -38,7 +36,6 @@ class AboutDrawer(
     }
 
     fun setEmailLink() = setLink(emailTextView)
-    fun setTwitterLink() = setLink(twitterTextView)
     private fun setLink(view: TextView) = launchCoroutineOnMain {
         view.movementMethod = LinkMovementMethod.getInstance()
         view.setHyperlinkStyle()

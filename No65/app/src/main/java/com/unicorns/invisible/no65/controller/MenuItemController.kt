@@ -10,7 +10,6 @@ abstract class MenuItemController {
     open val buttonsBlockingToListeners: Map<TextView, () -> Unit> = mapOf()
     open val buttonsNonBlockingToListeners: Map<TextView, () -> Unit> = mapOf()
     open val buttonsFreeToListeners: Map<TextView, () -> Unit> = mapOf()
-    open val buttonsSilentToListeners: Map<TextView, () -> Unit> = mapOf()
 
     private var itemSelected: Boolean = false
     fun reload() { itemSelected = false }
@@ -26,10 +25,6 @@ abstract class MenuItemController {
 
         buttonsFreeToListeners.forEach { pair ->
             setFreeListener(pair.key, pair.value)
-        }
-
-        buttonsSilentToListeners.forEach { pair ->
-            setSilentListener(pair.key, pair.value)
         }
     }
 
@@ -58,13 +53,6 @@ abstract class MenuItemController {
         launchCoroutineOnMain {
             button.setOnClickListener {
                 activity.playToggleSwitchSound()
-                listener()
-            }
-        }
-    }
-    fun setSilentListener(button: TextView, listener: () -> Unit) {
-        launchCoroutineOnMain {
-            button.setOnClickListener {
                 listener()
             }
         }

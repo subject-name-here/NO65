@@ -60,24 +60,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.6" />
 
-    <com.lb.auto_fit_textview.AutoResizeTextView
-        android:id="@+id/about_twitter"
-        style="@style/speech_view_style"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/white"
-        android:text="@string/about_twitter"
-        android:textColorLink="@color/bluish"
-        android:textSize="200sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_about_92"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline_about_60" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_about_92"
         android:layout_width="wrap_content"

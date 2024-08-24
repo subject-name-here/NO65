@@ -17,7 +17,6 @@ class MainController(
     private val redactMapListener: () -> Unit,
     private val playMapListener: () -> Unit,
     private val volumeListener: () -> Unit,
-    private val extrasListener: () -> Unit,
     private val helpTrigramsListener: () -> Unit,
     private val attributionsListener: () -> Unit,
     private val aboutListener: () -> Unit,
@@ -29,7 +28,6 @@ class MainController(
         get() = mapOf(
             binding.continueButton to continueListener,
             binding.newGameButton to newGameListener,
-            binding.extras to extrasListener,
             binding.helpTrigrams to helpTrigramsListener,
             binding.attributions to attributionsListener,
             binding.about to aboutListener,

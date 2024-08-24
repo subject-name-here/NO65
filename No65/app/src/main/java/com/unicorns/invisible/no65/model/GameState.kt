@@ -72,11 +72,4 @@ abstract class GameState {
         // 5: remove all unreachable vertices
         mapGraph.vertices.removeAll { it.index !in reachableMapsIndices }
     }
-
-    fun restartMoveables() {
-        val moveableCells = currentMap.getTopCells().filterIsInstance<CellNonStaticMoveable>()
-        for (cell in moveableCells) {
-            cell.restore(currentMap)
-        }
-    }
 }

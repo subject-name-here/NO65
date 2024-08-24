@@ -162,8 +162,6 @@ class RegisteredMusic {
             "map_fin" to { 0 },
             "temporary_end" to { 0 },
             "map_cht_rum" to { 0 },
-
-            "map_wat_abh" to { R.raw.location_wat_abh },
         ))
         
         private fun getSec4Music(manager: LandsManager): Int {

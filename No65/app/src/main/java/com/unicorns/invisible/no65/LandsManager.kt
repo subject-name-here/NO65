@@ -4,7 +4,6 @@ import com.unicorns.invisible.no65.controller.LandsController
 import com.unicorns.invisible.no65.databinding.ActivityLandsBinding
 import com.unicorns.invisible.no65.model.GameState
 import com.unicorns.invisible.no65.model.GameState65
-import com.unicorns.invisible.no65.model.GameStateBC
 import com.unicorns.invisible.no65.model.lands.BattleMode
 import com.unicorns.invisible.no65.model.lands.MoveMode
 import com.unicorns.invisible.no65.model.lands.RegisteredCounters.Companion.SAVE_COUNTER
@@ -16,7 +15,6 @@ import com.unicorns.invisible.no65.model.lands.cell.character.npc.CellNPC
 import com.unicorns.invisible.no65.model.lands.event.Event
 import com.unicorns.invisible.no65.util.*
 import com.unicorns.invisible.no65.view.Lands65Drawer
-import com.unicorns.invisible.no65.view.LandsBCDrawer
 import com.unicorns.invisible.no65.view.LandsDrawer
 import com.unicorns.invisible.no65.view.LandsFieldDrawer.Companion.LANDS_WEIGHT
 import com.unicorns.invisible.no65.view.lands.LandsMessageStoppedException
@@ -39,11 +37,7 @@ class LandsManager(
     val landsHeight = ScreenDimensions.getLandsHeight(landsWidth, LANDS_WEIGHT)
 
     val drawer: LandsDrawer by lazy {
-        if (gameState is GameState65) {
-            Lands65Drawer(activity, binding, landsWidth, landsHeight)
-        } else {
-            LandsBCDrawer(activity, binding, landsWidth, landsHeight)
-        }
+        Lands65Drawer(activity, binding, landsWidth, landsHeight)
     }
 
     val controller: LandsController by lazy {
@@ -130,19 +124,6 @@ class LandsManager(
                 gameState.moveMode = gameState.moveMode.next()
                 drawer65.setMoveMode(gameState.moveMode)
             }
-
-            controller.onRewindListeners.add {
-                if (gameState.rewindAvailable || rewindActiveOverride) {
-                    activity.playToggleSwitchSound()
-                }
-            }
-            controller.onRewindListeners.add {
-                if (isNotCutscene() && gameState.rewindAvailable || rewindActiveOverride) {
-                    gameState.restartMoveables()
-                }
-            }
-        } else if (gameState is GameStateBC) {
-            (drawer as LandsBCDrawer).hideControls()
         }
 
         controller.addCellsListeners(landsWidth, landsHeight) { screenCoordinates ->
