@@ -20,12 +20,15 @@
       "col": -1
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorPurple",
+      "type": "com.unicorns.invisible.no65.model.lands.cell.character.npc.ArousingThunder",
       "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": 0,
-          "col": -1
+        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorPurple",
+        "cellBelow": {
+          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+          "coordinates": {
+            "row": 0,
+            "col": -1
+          }
         }
       }
     },

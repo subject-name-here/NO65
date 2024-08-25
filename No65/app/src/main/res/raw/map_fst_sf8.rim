@@ -1,5 +1,4 @@
 {
-  "nameId": 21,
   "map": [
     {
       "row": 0,
@@ -621,50 +620,6 @@
       }
     },
     {
-      "row": -4,
-      "col": 58
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashRight",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 58
-        }
-      }
-    },
-    {
-      "row": -4,
-      "col": 57
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.door.HorizontalDoor",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 57
-        }
-      },
-      "id": 0,
-      "mode": "ALL"
-    },
-    {
-      "row": -4,
-      "col": 56
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashLeft",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 56
-        }
-      }
-    },
-    {
       "row": 1,
       "col": 49
     },
@@ -903,20 +858,6 @@
       }
     },
     {
-      "row": -5,
-      "col": 59
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashBottom",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -5,
-          "col": 59
-        }
-      }
-    },
-    {
       "row": 2,
       "col": 49
     },
@@ -1133,22 +1074,6 @@
           "col": 61
         }
       }
-    },
-    {
-      "row": -6,
-      "col": 59
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.door.VerticalDoor",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -6,
-          "col": 59
-        }
-      },
-      "id": 1,
-      "mode": "ALL"
     },
     {
       "row": -6,
@@ -1431,20 +1356,6 @@
         "coordinates": {
           "row": -7,
           "col": 61
-        }
-      }
-    },
-    {
-      "row": -7,
-      "col": 59
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashTop",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -7,
-          "col": 59
         }
       }
     },
@@ -2495,132 +2406,6 @@
       }
     },
     {
-      "row": -8,
-      "col": 58
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -8,
-          "col": 58
-        }
-      }
-    },
-    {
-      "row": -8,
-      "col": 59
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -8,
-          "col": 59
-        }
-      }
-    },
-    {
-      "row": -8,
-      "col": 57
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -8,
-          "col": 57
-        }
-      }
-    },
-    {
-      "row": -8,
-      "col": 56
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -8,
-          "col": 56
-        }
-      }
-    },
-    {
-      "row": -8,
-      "col": 55
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -8,
-          "col": 55
-        }
-      }
-    },
-    {
-      "row": -7,
-      "col": 55
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -7,
-          "col": 55
-        }
-      }
-    },
-    {
-      "row": -6,
-      "col": 55
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -6,
-          "col": 55
-        }
-      }
-    },
-    {
-      "row": -5,
-      "col": 55
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -5,
-          "col": 55
-        }
-      }
-    },
-    {
-      "row": -4,
-      "col": 55
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 55
-        }
-      }
-    },
-    {
       "row": 0,
       "col": -3
     },
@@ -3196,6 +2981,35 @@
           "col": 33
         }
       }
+    },
+    {
+      "row": -4,
+      "col": 57
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -4,
+          "col": 57
+        }
+      }
+    },
+    {
+      "row": -6,
+      "col": 59
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -6,
+          "col": 59
+        }
+      }
     }
-  ]
+  ],
+  "nameId": 21
 }

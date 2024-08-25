@@ -1,20 +1,5 @@
 {
-  "nameId": 22,
   "map": [
-    {
-      "row": -1,
-      "col": 30
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashTop",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -1,
-          "col": 30
-        }
-      }
-    },
     {
       "row": 0,
       "col": 1
@@ -379,15 +364,12 @@
       "col": 25
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.moveable.Source",
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorLightGrey",
       "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorLightGrey",
-        "cellBelow": {
-          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-          "coordinates": {
-            "row": 0,
-            "col": 25
-          }
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 25
         }
       }
     },
@@ -463,22 +445,6 @@
     },
     {
       "row": 0,
-      "col": 30
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.door.VerticalDoor",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": 0,
-          "col": 30
-        }
-      },
-      "id": 0,
-      "mode": "ALL"
-    },
-    {
-      "row": 0,
       "col": 31
     },
     {
@@ -525,20 +491,6 @@
       }
     },
     {
-      "row": -2,
-      "col": 27
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -2,
-          "col": 27
-        }
-      }
-    },
-    {
       "row": 1,
       "col": 4
     },
@@ -549,20 +501,6 @@
         "coordinates": {
           "row": 1,
           "col": 4
-        }
-      }
-    },
-    {
-      "row": -2,
-      "col": 26
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorLightGrey",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -2,
-          "col": 26
         }
       }
     },
@@ -642,15 +580,12 @@
       "col": 21
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.moveable.Source",
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorBlue",
       "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorBlue",
-        "cellBelow": {
-          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-          "coordinates": {
-            "row": -2,
-            "col": 21
-          }
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": -2,
+          "col": 21
         }
       }
     },
@@ -865,48 +800,6 @@
       }
     },
     {
-      "row": 1,
-      "col": 30
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.sash.SashBottom",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": 1,
-          "col": 30
-        }
-      }
-    },
-    {
-      "row": -3,
-      "col": 26
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorLightGrey",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -3,
-          "col": 26
-        }
-      }
-    },
-    {
-      "row": -3,
-      "col": 25
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorLightGrey",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -3,
-          "col": 25
-        }
-      }
-    },
-    {
       "row": -3,
       "col": 23
     },
@@ -1037,15 +930,12 @@
       "col": 21
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.moveable.Source",
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorBlue",
       "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorBlue",
-        "cellBelow": {
-          "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-          "coordinates": {
-            "row": 2,
-            "col": 21
-          }
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 2,
+          "col": 21
         }
       }
     },
@@ -1388,20 +1278,6 @@
     },
     {
       "row": -4,
-      "col": 27
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 27
-        }
-      }
-    },
-    {
-      "row": -4,
       "col": 26
     },
     {
@@ -1411,20 +1287,6 @@
         "coordinates": {
           "row": -4,
           "col": 26
-        }
-      }
-    },
-    {
-      "row": -4,
-      "col": 25
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -4,
-          "col": 25
         }
       }
     },
@@ -1598,20 +1460,6 @@
     },
     {
       "row": -2,
-      "col": 30
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": -2,
-          "col": 30
-        }
-      }
-    },
-    {
-      "row": -2,
       "col": 31
     },
     {
@@ -1705,20 +1553,6 @@
         "coordinates": {
           "row": 2,
           "col": 31
-        }
-      }
-    },
-    {
-      "row": 2,
-      "col": 30
-    },
-    {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.FistWall",
-      "cellBelow": {
-        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
-        "coordinates": {
-          "row": 2,
-          "col": 30
         }
       }
     },
@@ -2183,6 +2017,21 @@
           "col": 16
         }
       }
+    },
+    {
+      "row": 0,
+      "col": 30
+    },
+    {
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
+      "cellBelow": {
+        "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
+        "coordinates": {
+          "row": 0,
+          "col": 30
+        }
+      }
     }
-  ]
+  ],
+  "nameId": 22
 }

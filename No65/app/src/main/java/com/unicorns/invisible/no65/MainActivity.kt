@@ -3,15 +3,11 @@ package com.unicorns.invisible.no65
 import android.os.Bundle
 import android.view.View
 import androidx.viewbinding.ViewBinding
-import com.quickbirdstudios.nonEmptyCollection.list.nonEmptyListOf
 import com.unicorns.invisible.no65.controller.MainController
 import com.unicorns.invisible.no65.databinding.ActivityMainBinding
 import com.unicorns.invisible.no65.databinding.ActivityTurnOnBinding
 import com.unicorns.invisible.no65.init.InitData
 import com.unicorns.invisible.no65.model.GameState65
-import com.unicorns.invisible.no65.model.battlefield.enemy.enemies.BattleFieldTheCreature
-import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldProtagonist
-import com.unicorns.invisible.no65.model.knowledge.Knowledge
 import com.unicorns.invisible.no65.model.lands.BattleMode
 import com.unicorns.invisible.no65.model.lands.MoveMode
 import com.unicorns.invisible.no65.model.lands.RegisteredCounters.Companion.WORLD_TRACE_NUMBER

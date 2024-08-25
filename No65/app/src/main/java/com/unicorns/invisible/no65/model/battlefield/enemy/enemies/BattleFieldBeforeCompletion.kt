@@ -242,6 +242,7 @@ class BattleFieldBeforeCompletion : BattleFieldEnemy() {
                 }
             }
             11 -> {
+                // TODO: test
                 manager.drawer.hideAll()
                 manager.drawer.showTextInEnemySpeechBubbleSuspend(R.string.battlefield_before_completion_after_11_1)
                 manager.drawer.showTextInEnemySpeechBubbleSuspend(R.string.battlefield_before_completion_after_11_2)
