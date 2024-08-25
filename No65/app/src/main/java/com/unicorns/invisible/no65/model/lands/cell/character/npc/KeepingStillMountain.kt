@@ -6,7 +6,6 @@ import com.unicorns.invisible.no65.model.lands.cell.Cell
 import com.unicorns.invisible.no65.model.lands.emotion.Emotion
 import com.unicorns.invisible.no65.model.lands.event.Event
 import com.unicorns.invisible.no65.model.lands.event.events.battle.EventAttack
-import com.unicorns.invisible.no65.model.lands.event.events.battle.victory.EventKSMAfterVictory
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventKSM
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventUnlockBattle
 import kotlinx.serialization.Serializable
@@ -37,7 +36,7 @@ class KeepingStillMountain(override var cellBelow: Cell): CellNPC() {
                 EventAttack(
                     this,
                     BattleFieldKeepingStillMountain(),
-                    onAfterVictoryEvent = EventKSMAfterVictory().then(EventUnlockBattle(9))
+                    onAfterVictoryEvent = EventUnlockBattle(9)
                 )
             )
 

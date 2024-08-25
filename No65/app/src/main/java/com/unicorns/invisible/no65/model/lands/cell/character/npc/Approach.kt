@@ -12,6 +12,7 @@ import com.unicorns.invisible.no65.model.lands.event.events.EventTeleport
 import com.unicorns.invisible.no65.model.lands.event.events.battle.EventAttack
 import com.unicorns.invisible.no65.model.lands.event.events.speak.EventNPCSpeakCutscene
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventUnlockBattle
+import com.unicorns.invisible.no65.util.CellUtils
 import com.unicorns.invisible.no65.util.Coordinates
 import kotlinx.serialization.Serializable
 
@@ -82,13 +83,20 @@ class Approach(override var cellBelow: Cell) : CellNPC() {
     }
 
     override fun onSight(distanceToProtagonist: Int): Event {
+        if (distanceToProtagonist >= 2) {
+            state = State.SLEEPING
+            return Event.Null
+        }
+
         if (!speakEventStarted && !attackEventStarted) {
-            if (distanceToProtagonist < 2) {
-                speakEventStarted = true
-                state = State.AWAKEN
-                return speakEvent.then(teleportEvent).then(clearFlagsEvent)
-            } else {
-                state = State.SLEEPING
+            speakEventStarted = true
+            state = State.AWAKEN
+            return EventFactory.createWithNext { manager ->
+                if (CellUtils.distanceToProtagonist(manager, this@Approach.coordinates) >= 2) {
+                    state = State.SLEEPING
+                    return@createWithNext Event.Null
+                }
+                return@createWithNext speakEvent.then(teleportEvent).then(clearFlagsEvent)
             }
         }
         return Event.Null

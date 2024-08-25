@@ -138,7 +138,13 @@ class BattleFieldClingingFire : BattleFieldEnemy() {
                 when (movesInSecondPhase) {
                     in (1..2) -> battleField.width - 1
                     in (3..4) -> randInt(3, battleField.width)
-                    else -> randInt(2, battleField.width - 1)
+                    else -> {
+                        if (safeLineWidth == 2) {
+                            battleField.width - 1
+                        } else {
+                            randInt(2, battleField.width - 1)
+                        }
+                    }
                 }
             } else {
                 battleField.width

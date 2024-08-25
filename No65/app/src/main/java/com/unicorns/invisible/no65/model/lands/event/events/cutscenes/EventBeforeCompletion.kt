@@ -9,6 +9,7 @@ import com.unicorns.invisible.no65.model.lands.event.Event
 import com.unicorns.invisible.no65.saveload.GlobalFlags.Companion.BC_BATTLE_EVENT_REACHED
 import com.unicorns.invisible.no65.saveload.GlobalState
 import com.unicorns.invisible.no65.util.CellUtils
+import com.unicorns.invisible.no65.util.launchCoroutine
 import com.unicorns.invisible.no65.view.music.MusicPlayer
 import kotlinx.coroutines.delay
 import kotlin.coroutines.resume
@@ -63,26 +64,30 @@ class EventBeforeCompletion(
         R.string.lands_before_completion_event_8,
         R.string.lands_before_completion_event_9,
     )
-    manager.wrapCutscene {
-        drawer.showCharacterMessages(characterCell, messages)
-        CellUtils.litUpCurrentMapFloors(this)
-        delay(500L)
+    launchCoroutine {
+        manager.wrapCutscene {
+            drawer.showCharacterMessages(characterCell, messages)
+            CellUtils.litUpCurrentMapFloors(this)
+            delay(500L)
 
-        drawer.showCharacterMessages(characterCell, situationMessages)
+            drawer.showCharacterMessages(characterCell, situationMessages)
 
-        drawer.postShowMessage()
-        gameState.battleMode = BattleMode.PEACE
-        awaitInteractionModeChange(this)
-        delay(500L)
-        drawer.preShowMessage()
+            drawer.postShowMessage()
+            gameState.battleMode = BattleMode.PEACE
+            awaitInteractionModeChange(this)
+            delay(500L)
+            drawer.preShowMessage()
 
-        drawer.showCharacterMessages(characterCell, afterSwordMessages)
+            drawer.showCharacterMessages(characterCell, afterSwordMessages)
 
-        drawer.postShowMessage()
-        suspendCoroutine { cont ->
-            characterCell.awaitingUseContinuation = cont
+            drawer.postShowMessage()
+            suspendCoroutine { cont ->
+                characterCell.awaitingUseContinuation = cont
+            }
+
+            GlobalState.putBoolean(activity, BC_BATTLE_EVENT_REACHED, true)
+
+            characterCell.trueAttackEvent.fireEventChain(manager)
         }
-
-        GlobalState.putBoolean(activity, BC_BATTLE_EVENT_REACHED, true)
     }
 })

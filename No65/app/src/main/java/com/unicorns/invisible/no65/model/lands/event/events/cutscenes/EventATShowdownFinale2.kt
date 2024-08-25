@@ -8,7 +8,7 @@ import com.unicorns.invisible.no65.saveload.GlobalState
 import kotlinx.coroutines.delay
 
 
-class EventAtShowdownFinale2(thunderCell: ArousingThunder) : Event({ manager ->
+class EventATShowdownFinale2(thunderCell: ArousingThunder) : Event({ manager ->
     manager.wrapCutscene {
         drawer.showCharacterMessages(thunderCell,
             listOf(

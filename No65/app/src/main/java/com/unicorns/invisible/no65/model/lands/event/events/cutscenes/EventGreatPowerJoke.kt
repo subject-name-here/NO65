@@ -3,6 +3,7 @@ package com.unicorns.invisible.no65.model.lands.event.events.cutscenes
 import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.model.lands.cell.character.npc.GreatPower
 import com.unicorns.invisible.no65.model.lands.event.Event
+import com.unicorns.invisible.no65.util.launchCoroutine
 import com.unicorns.invisible.no65.view.music.MusicPlayer
 import kotlinx.coroutines.delay
 
@@ -26,6 +27,9 @@ class EventGreatPowerJoke(greatPower: GreatPower) : Event({ manager ->
         drawer.showMessage(messagePunchline, greatPower.speechColor, greatPower.speechSound)
         drawer.hideTalkingHead()
     }
-    delay(5000L)
-    greatPower.state = GreatPower.State.HUB_NOT_LAUGHING
+    launchCoroutine {
+        // TODO: test
+        delay(5000L)
+        greatPower.state = GreatPower.State.HUB_NOT_LAUGHING
+    }
 })

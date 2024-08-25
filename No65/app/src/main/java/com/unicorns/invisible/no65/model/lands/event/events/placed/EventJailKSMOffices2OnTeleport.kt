@@ -14,11 +14,4 @@ class EventJailKSMOffices2OnTeleport : EventPlaced({ manager ->
             tapSoundId = R.raw.sfx_tap
         )
     }
-}) {
-    override fun getConditionToFire(manager: LandsManager): Boolean {
-        if (firingCell !is CellProtagonist) {
-            return false
-        }
-        return manager.gameState.currentMap.getTopCells().filterIsInstance<KeepingStillMountain>().isNotEmpty()
-    }
-}
+})

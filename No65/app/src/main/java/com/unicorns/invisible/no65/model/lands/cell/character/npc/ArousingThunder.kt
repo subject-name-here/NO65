@@ -16,7 +16,7 @@ import com.unicorns.invisible.no65.model.lands.event.events.battle.victory.Event
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATGhostAttacked
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownFinale1
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownVisited
-import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventAtShowdownFinale2
+import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownFinale2
 import com.unicorns.invisible.no65.model.lands.event.events.speak.EventNPCSpeak
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventUnlockBattle
 import com.unicorns.invisible.no65.saveload.GlobalFlags.Companion.AT_BATTLE_EVENT_REACHED
@@ -76,7 +76,7 @@ class ArousingThunder(override var cellBelow: Cell) : CellNPC() {
                         firstCutsceneFired = true
                         EventATShowdownFinale1(this@ArousingThunder)
                     }
-                    else -> EventAtShowdownFinale2(this@ArousingThunder).then(attackEvent)
+                    else -> EventATShowdownFinale2(this@ArousingThunder).then(attackEvent)
                 }
             }
 

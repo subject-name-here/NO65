@@ -39,14 +39,6 @@ class BeforeCompletion(override var cellBelow: Cell) : CellNPCStandard() {
 
     private val meetEvent
         get() = EventBeforeCompletion(this)
-            .then(
-                EventAttack(
-                    this,
-                    BattleFieldBeforeCompletion(),
-                    onAfterVictoryEvent = EventBeforeCompletionAfterVictory().then(EventUnlockBattle(0)),
-                    isTutorial = true
-                )
-            )
     private var meetEventFired = false
     override fun onSight(distanceToProtagonist: Int): Event {
         if (state == State.PROTAGONIST) return Event.Null
@@ -56,6 +48,14 @@ class BeforeCompletion(override var cellBelow: Cell) : CellNPCStandard() {
         }
         return Event.Null
     }
+
+    @Transient
+    val trueAttackEvent = EventAttack(
+        this,
+        BattleFieldBeforeCompletion(),
+        onAfterVictoryEvent = EventBeforeCompletionAfterVictory().then(EventUnlockBattle(0)),
+        isTutorial = true
+    )
 
     @Transient
     var awaitingUseContinuation: Continuation<Unit>? = null

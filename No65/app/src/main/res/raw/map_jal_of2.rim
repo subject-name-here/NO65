@@ -111,8 +111,7 @@
       "col": 33
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
-      "litUp": false,
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.block.BlockWallOrange",
       "cellBelow": {
         "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
         "coordinates": {
@@ -1324,8 +1323,7 @@
       "col": 33
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorWhite",
-      "litUp": false,
+      "type": "com.unicorns.invisible.no65.model.lands.cell.wall.block.BlockWallOrange",
       "cellBelow": {
         "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
         "coordinates": {

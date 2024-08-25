@@ -3,7 +3,6 @@ package com.unicorns.invisible.no65
 import android.widget.TextView
 import com.unicorns.invisible.no65.controller.MenuItemController
 import com.unicorns.invisible.no65.databinding.ActivityAttributionsBinding
-import com.unicorns.invisible.no65.util.launchCoroutine
 import com.unicorns.invisible.no65.util.launchCoroutineOnDefault
 import com.unicorns.invisible.no65.view.AttributionsDrawer
 import kotlinx.coroutines.Job

@@ -8,6 +8,7 @@ import com.unicorns.invisible.no65.model.lands.event.events.location.*
 import com.unicorns.invisible.no65.model.lands.event.events.placed.*
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventEnteredTemple
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventLeftRHQHall
+import com.unicorns.invisible.no65.model.lands.event.events.util.EventTeleportToFist
 import com.unicorns.invisible.no65.util.Coordinates
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.Transient
@@ -30,12 +31,10 @@ class RegisteredEvents {
         "map_fst_sf6" to EventSF6(),
         "map_fst_sf7" to EventSF7(),
         "map_fst_sf8" to EventSF8(),
-        "map_fst_sf9" to EventSF9(),
         "map_fst_atr" to EventMeetAT(),
         "map_fst_wm0" to EventWM0(),
         "map_fst_wm1" to EventWM1(),
         "map_fst_wm2" to EventWM2(),
-        "map_fst_wm3" to EventWM3(),
         "map_fst_tlf" to EventTLF(),
         "map_rhq_hmr" to EventLeftRHQHall(),
         "map_str_50" to EventStr50(),
@@ -115,6 +114,7 @@ class RegisteredEvents {
     data class OnUseEventKey(val mapName: String, val cell: Coordinates)
     @Transient
     private val onUseEvents = mapOf(
+        OnUseEventKey("map_jal_of2", Coordinates(-5, 70)) to EventTeleportToFist(),
         OnUseEventKey("map_fst_wot", Coordinates(0, 16)) to EventOnFistWayOut(),
         OnUseEventKey("map_rhq_hal", Coordinates(-11, 0)) to Event5Minutes(),
         OnUseEventKey("map_str_50", Coordinates(4, -12)) to EventOppositionMoneyStolen(),

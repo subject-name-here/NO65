@@ -22,7 +22,7 @@ import com.unicorns.invisible.no65.view.music.MusicPlayer
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
-import kotlinx.coroutines.joinAll
+import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.properties.Delegates
@@ -59,6 +59,15 @@ class LandsManager(
             delay(TICK_TIME_MILLISECONDS)
         }
     }
+    private val secondaryJobs: ConcurrentLinkedQueue<suspend () -> Unit> = ConcurrentLinkedQueue()
+    private val secondaryCycleJob: Job = launchCoroutineOnDefault {
+        while (isActive) {
+            while (secondaryJobs.isNotEmpty()) {
+                secondaryJobs.remove().invoke()
+            }
+            delay(TICK_TIME_MILLISECONDS)
+        }
+    }
     private val mapLock = ReentrantLock()
 
     var stopped = false
@@ -91,8 +100,6 @@ class LandsManager(
         this.cutscene()
         cutsceneState = CutsceneState.NO_CUTSCENE
     }
-
-    var rewindActiveOverride = false
 
     suspend fun init() {
         activity.setContentView(binding.root)
@@ -172,22 +179,22 @@ class LandsManager(
             cell.onTick(gameState.tick)
 
             if (cell is CellControl) {
-                launchCoroutine {
+                secondaryJobs.add(suspend {
                     cell.onTickWithEvent(gameState.tick).fireEventChain(this@LandsManager)
-                }
+                })
             }
 
             if (cell is CellNonEmpty) {
                 val cellBelow = cell.cellBelow
                 if (cellBelow is CellPassable) {
-                    launchCoroutine {
+                    secondaryJobs.add(suspend {
                         getCellBelowStepEvent(cellBelow, cell).fireEventChain(this@LandsManager)
-                    }
+                    })
                 }
                 if (cellBelow is CellSemiStatic && cellBelow.isPassable()) {
-                    launchCoroutine {
+                    secondaryJobs.add(suspend {
                         cellBelow.onStep().fireEventChain(this@LandsManager)
-                    }
+                    })
                 }
             }
         }
@@ -195,9 +202,9 @@ class LandsManager(
         for (cell in CellUtils.getCellsInSight(this)) {
             if (cell is CellNPC) {
                 val dist = CellUtils.distanceToProtagonist(this, cell.coordinates)
-                launchCoroutine {
+                secondaryJobs.add(suspend {
                     cell.onSight(dist).fireEventChain(this@LandsManager)
-                }
+                })
             }
         }
     }
@@ -216,9 +223,9 @@ class LandsManager(
                 gameState.currentMap.moveOnDelta(gameState.protagonist, totalDelta)
                 gameState.companions
                     .forEach {
-                        launchCoroutine {
+                        secondaryJobs.add(suspend {
                             it.onProtagonistMoveOnDelta(totalDelta).fireEventChain(this@LandsManager)
-                        }
+                        })
                     }
             }
         }
@@ -229,9 +236,9 @@ class LandsManager(
         if (cell is CellUsable) {
             if (isNotCutscene() || cell.isUsableDuringCutscene()) {
                 val onUseEvent = gameState.eventMaster.getOnUseEvent(gameState.currentMapIndex, mapCoordinates)
-                launchCoroutine {
+                secondaryJobs.add(suspend {
                     cell.use().then(onUseEvent).fireEventChain(this@LandsManager)
-                }
+                })
             }
         }
     }
@@ -243,17 +250,16 @@ class LandsManager(
 
         gameState.setCurrentMapIndex(newRelativeIndex, activity)
 
-        val companionsCoroutines = companions.map {
-            launchCoroutine {
+        companions.map {
+            secondaryJobs.add(suspend {
                 it.onCurrentMapChange(prevIndex).fireEventChain(this@LandsManager)
-            }
+            })
         }
 
-        launchCoroutine {
-            companionsCoroutines.joinAll()
+        secondaryJobs.add(suspend {
             val entranceEvent = gameState.eventMaster.getOnMapEnterEvent(gameState.currentMapIndex)
             entranceEvent.fireEventChain(this@LandsManager)
-        }
+        })
 
         val newMusicThemeId = getCurrentMapMusicThemeId()
         if (previousMusicThemeId != newMusicThemeId) {
@@ -271,6 +277,9 @@ class LandsManager(
         activity.musicPlayer.stopAllMusic()
         if (mainCycleJob.isActive) {
             mainCycleJob.cancel()
+        }
+        if (secondaryCycleJob.isActive) {
+            secondaryCycleJob.cancel()
         }
         drawer.stop()
     }

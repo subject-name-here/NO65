@@ -14,8 +14,8 @@ android {
         applicationId "com.unicorns.invisible.no65"
         minSdk 21
         targetSdk 34
-        versionCode 10
-        versionName "0.97"
+        versionCode 15
+        versionName "0.99"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
