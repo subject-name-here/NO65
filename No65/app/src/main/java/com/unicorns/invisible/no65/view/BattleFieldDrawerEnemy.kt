@@ -7,7 +7,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import com.lb.auto_fit_textview.AutoResizeTextView
 import com.unicorns.invisible.no65.MainActivity
-import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.databinding.ActivityBattleBinding
 import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldCharacter
 import com.unicorns.invisible.no65.util.getColorById

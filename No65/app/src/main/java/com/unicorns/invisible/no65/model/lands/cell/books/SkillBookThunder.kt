@@ -18,4 +18,5 @@ class SkillBookThunder(override var cellBelow: Cell): SkillBook() {
 
     override val acquiredEvent
         get() = EventLightningStrikeAcquired(this@SkillBookThunder)
+            .then(EventTLFOnLightningStrikeAcquired())
 }

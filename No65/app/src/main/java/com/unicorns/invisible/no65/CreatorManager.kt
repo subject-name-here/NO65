@@ -11,7 +11,10 @@ import com.unicorns.invisible.no65.model.lands.cell.interactive.CellMessage
 import com.unicorns.invisible.no65.model.lands.cell.service.TeleportCell
 import com.unicorns.invisible.no65.model.lands.map.LandsMap
 import com.unicorns.invisible.no65.saveload.SaveManager
-import com.unicorns.invisible.no65.util.*
+import com.unicorns.invisible.no65.util.Coordinates
+import com.unicorns.invisible.no65.util.ScreenDimensions
+import com.unicorns.invisible.no65.util.getMapCoordinatesByScreenCoordinates
+import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import com.unicorns.invisible.no65.view.CreatorDrawer
 import com.unicorns.invisible.no65.view.LandsFieldDrawer.Companion.LANDS_WEIGHT
 import kotlin.properties.Delegates

@@ -15,8 +15,8 @@ import com.unicorns.invisible.no65.model.lands.event.events.battle.EventAttack
 import com.unicorns.invisible.no65.model.lands.event.events.battle.victory.EventArousingThunderAfterVictory
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATGhostAttacked
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownFinale1
-import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownVisited
 import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownFinale2
+import com.unicorns.invisible.no65.model.lands.event.events.cutscenes.EventATShowdownVisited
 import com.unicorns.invisible.no65.model.lands.event.events.speak.EventNPCSpeak
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventUnlockBattle
 import com.unicorns.invisible.no65.saveload.GlobalFlags.Companion.AT_BATTLE_EVENT_REACHED

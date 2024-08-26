@@ -5,12 +5,8 @@ import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.view.animation.RotateAnimation
 import android.view.animation.TranslateAnimation
-import android.widget.ProgressBar
-import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.animation.doOnEnd
 import com.unicorns.invisible.no65.MainActivity
-import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.databinding.DeliveranceAdLayoutBinding
 import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import kotlin.coroutines.resume

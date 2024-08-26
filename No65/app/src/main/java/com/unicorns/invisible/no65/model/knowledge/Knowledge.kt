@@ -1,6 +1,8 @@
 package com.unicorns.invisible.no65.model.knowledge
 
-import com.unicorns.invisible.no65.model.elements.trigram.*
+import com.unicorns.invisible.no65.model.elements.trigram.Lake
+import com.unicorns.invisible.no65.model.elements.trigram.Trigram
+import com.unicorns.invisible.no65.model.elements.trigram.Wind
 import kotlinx.serialization.Serializable
 
 

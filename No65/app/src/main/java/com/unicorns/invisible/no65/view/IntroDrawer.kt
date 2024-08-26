@@ -14,7 +14,9 @@ import com.unicorns.invisible.no65.util.getColorById
 import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import com.unicorns.invisible.no65.view.music.MusicPlayer
 import com.unicorns.invisible.no65.view.speech.SpeechProperties
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 
 
 class IntroDrawer(

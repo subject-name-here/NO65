@@ -3,7 +3,6 @@ package com.unicorns.invisible.no65.util
 import android.app.Activity
 import android.content.res.Resources
 import android.os.Build
-import com.unicorns.invisible.no65.view.LandsFieldDrawer
 
 class ScreenDimensions {
     companion object {

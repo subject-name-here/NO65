@@ -17,7 +17,10 @@ import com.unicorns.invisible.no65.model.lands.cell.CellUsable
 import com.unicorns.invisible.no65.model.lands.cell.character.CellNonStaticCharacter
 import com.unicorns.invisible.no65.model.lands.cell.character.CellTheCreature
 import com.unicorns.invisible.no65.model.lands.map.LandsMap
-import com.unicorns.invisible.no65.util.*
+import com.unicorns.invisible.no65.util.Coordinates
+import com.unicorns.invisible.no65.util.getColorById
+import com.unicorns.invisible.no65.util.getMapCoordinatesByScreenCoordinates
+import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import kotlinx.coroutines.delay
 
 

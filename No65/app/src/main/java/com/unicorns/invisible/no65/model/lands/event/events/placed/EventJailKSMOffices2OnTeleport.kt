@@ -1,9 +1,6 @@
 package com.unicorns.invisible.no65.model.lands.event.events.placed
 
-import com.unicorns.invisible.no65.LandsManager
 import com.unicorns.invisible.no65.R
-import com.unicorns.invisible.no65.model.lands.cell.character.CellProtagonist
-import com.unicorns.invisible.no65.model.lands.cell.character.npc.KeepingStillMountain
 import com.unicorns.invisible.no65.model.lands.event.EventPlaced
 
 class EventJailKSMOffices2OnTeleport : EventPlaced({ manager ->

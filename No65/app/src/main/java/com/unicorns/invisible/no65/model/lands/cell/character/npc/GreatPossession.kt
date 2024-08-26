@@ -20,7 +20,6 @@ import com.unicorns.invisible.no65.model.lands.event.events.speak.EventNPCSpeak
 import com.unicorns.invisible.no65.model.lands.event.events.speak.EventNPCSpeakCutscene
 import com.unicorns.invisible.no65.model.lands.event.events.util.EventUnlockBattle
 import com.unicorns.invisible.no65.util.randBoolean
-import com.unicorns.invisible.no65.util.randBooleanPercent
 import kotlinx.serialization.Serializable
 
 @Serializable

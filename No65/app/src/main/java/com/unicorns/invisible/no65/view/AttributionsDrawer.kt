@@ -9,7 +9,8 @@ import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import com.unicorns.invisible.no65.view.music.MusicPlayer
 import com.unicorns.invisible.no65.view.speech.SpeechProperties.Companion.DELAY_AFTER_MESSAGE
 import com.unicorns.invisible.no65.view.speech.SpeechProperties.Companion.MILLISECONDS_PER_SYMBOL
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 

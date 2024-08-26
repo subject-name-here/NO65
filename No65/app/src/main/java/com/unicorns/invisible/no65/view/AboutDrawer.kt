@@ -7,7 +7,6 @@ import android.text.style.URLSpan
 import android.view.View
 import android.widget.TextView
 import com.unicorns.invisible.no65.MainActivity
-import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.databinding.ActivityAboutBinding
 import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 

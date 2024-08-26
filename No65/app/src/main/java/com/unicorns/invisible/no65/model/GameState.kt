@@ -7,7 +7,6 @@ import com.unicorns.invisible.no65.model.lands.RegisteredFlags
 import com.unicorns.invisible.no65.model.lands.cell.CellCompanion
 import com.unicorns.invisible.no65.model.lands.cell.CellNonEmpty
 import com.unicorns.invisible.no65.model.lands.cell.character.CellNonStaticCharacter
-import com.unicorns.invisible.no65.model.lands.cell.moveable.CellNonStaticMoveable
 import com.unicorns.invisible.no65.model.lands.map.LandsMap
 import com.unicorns.invisible.no65.model.lands.map.MapGraph
 import com.unicorns.invisible.no65.saveload.SaveManager

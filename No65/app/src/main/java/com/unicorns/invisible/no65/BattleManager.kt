@@ -249,7 +249,7 @@ class BattleManager(
         drawer.drawField(battleField)
         checkpoint()
     }
-    private suspend fun onFieldEnd() {
+    private fun onFieldEnd() {
         battleField.onEnemyMoveEnd()
 
         battleField.clear()
@@ -264,7 +264,7 @@ class BattleManager(
         val drawerStandard = drawer as BattleFieldDrawerStandard
         val protagonist65 = protagonist as BattleFieldProtagonist
         val enemy65 = enemy as BattleFieldEnemy
-        val battleField65 = battleField as BattleField65
+        val battleField65 = battleField
 
         if (enemy65.defenceTimeSec == 0) {
             return

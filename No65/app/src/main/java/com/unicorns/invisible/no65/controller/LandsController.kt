@@ -4,9 +4,7 @@ package com.unicorns.invisible.no65.controller
 import android.annotation.SuppressLint
 import android.widget.TableLayout
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.unicorns.invisible.no65.MainActivity
-import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.databinding.ActivityLandsBinding
 import com.unicorns.invisible.no65.util.launchCoroutineOnMain
 import com.unicorns.invisible.no65.view.dpad.CircleDPadMk2

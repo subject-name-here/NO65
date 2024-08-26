@@ -10,7 +10,6 @@ import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldProtagon
 import com.unicorns.invisible.no65.model.lands.RegisteredFlags.Companion.STARTED_GAME
 import com.unicorns.invisible.no65.model.lands.event.Event
 import com.unicorns.invisible.no65.saveload.GlobalFlags.Companion.THE_CREATURE_KILLED
-import com.unicorns.invisible.no65.saveload.GlobalFlags.Companion.THE_CREATURE_MET_COUNTER
 import com.unicorns.invisible.no65.saveload.GlobalState
 import com.unicorns.invisible.no65.util.launchCoroutine
 import com.unicorns.invisible.no65.util.launchCoroutineOnMain

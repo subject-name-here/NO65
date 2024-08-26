@@ -6,10 +6,8 @@ import kotlinx.coroutines.delay
 
 class EventSF6 : Event({ manager ->
     manager.wrapCutscene {
-        drawer.showMessagesPhoneWithUnknownHead(listOf(R.string.lands_fist_sf6_1))
         drawer.showMessagesPhoneWithUnknownHead(
             listOf(
-                R.string.lands_fist_sf6_2,
                 R.string.lands_fist_sf6_3,
                 R.string.lands_fist_sf6_4,
                 R.string.lands_fist_sf6_5,
