@@ -3,6 +3,9 @@ package com.unicorns.invisible.no65.model.lands.cell.service
 import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.model.lands.cell.Cell
 import com.unicorns.invisible.no65.model.lands.cell.CellSemiStatic
+import com.unicorns.invisible.no65.model.lands.event.Event
+import com.unicorns.invisible.no65.model.lands.event.EventFactory
+import com.unicorns.invisible.no65.view.music.MusicPlayer
 import kotlinx.serialization.Serializable
 
 
@@ -16,4 +19,14 @@ class GenocideLock(override var cellBelow: Cell): CellSemiStatic() {
         get() = R.color.almost_white
 
     override fun isPassable(): Boolean = true
+
+    override fun onStep(): Event {
+        return EventFactory.create { manager ->
+            manager.activity.musicPlayer.playMusic(
+                R.raw.genocider,
+                MusicPlayer.MusicBehaviour.IGNORE,
+                isLooping = false
+            )
+        }
+    }
 }

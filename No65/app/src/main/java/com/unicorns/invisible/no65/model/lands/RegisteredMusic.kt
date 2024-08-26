@@ -103,8 +103,6 @@ class RegisteredMusic {
             "map_rev_cor" to { R.raw.location_rev },
             "map_rev_pz1" to { R.raw.location_rev },
             "map_rev_pz1_5" to { R.raw.location_rev },
-            "map_rev_pz2" to { R.raw.location_rev },
-            "map_rev_soc" to { R.raw.location_rev },
             "map_sec2" to ::getSec2Music,
             "map_sec2_bar" to ::getSec2Music,
             "map_str_23" to ::getSec2Music,

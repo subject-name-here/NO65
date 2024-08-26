@@ -147,15 +147,14 @@
       "col": 9
     },
     {
-      "type": "com.unicorns.invisible.no65.model.lands.cell.control.door.VerticalDoor",
+      "type": "com.unicorns.invisible.no65.model.lands.cell.floor.CellFloorAlmostBlack",
       "cellBelow": {
         "type": "com.unicorns.invisible.no65.model.lands.cell.CellEmpty",
         "coordinates": {
           "row": 0,
           "col": 9
         }
-      },
-      "id": 0
+      }
     },
     {
       "row": 0,

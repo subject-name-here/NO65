@@ -267,6 +267,7 @@ class BattleManager(
         val battleField65 = battleField
 
         if (enemy65.defenceTimeSec == 0) {
+            processTrigram(drawerStandard, protagonist65, enemy65, battleField65)
             return
         }
         drawerStandard.showElements()

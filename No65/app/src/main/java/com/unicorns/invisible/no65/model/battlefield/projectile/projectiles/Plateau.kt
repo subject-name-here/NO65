@@ -10,7 +10,7 @@ class Plateau(
 ) : BattleFieldProjectile(
     position, direction
 ) {
-    override var damage: Int = 20
+    override var damage: Int = 10
     override fun getString(): String = "Ӱ"
     override fun getStringColor(): Int = R.color.brown
 }

@@ -41,7 +41,6 @@ class RegisteredEvents {
         "map_rev_pz1_5" to EventRevPz15(),
         "map_rev_ch2" to EventRevCh2(),
         "map_rev_chf" to EventRevChF(),
-        "map_rev_soc" to EventRevSoc(),
         "map_sec2" to EventSec2(),
         "map_jal_rev" to EventJalRev(),
         "map_sec1" to EventSec1(),

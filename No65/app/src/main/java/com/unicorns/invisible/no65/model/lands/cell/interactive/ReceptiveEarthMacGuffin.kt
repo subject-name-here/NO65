@@ -12,6 +12,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 class ReceptiveEarthMacGuffin(override var cellBelow: Cell): MacGuffin() {
+    override var triggerState: MacGuffinState = MacGuffinState.WHOLE
+
     override val symbolColor
         get() = R.color.true_yellow
 

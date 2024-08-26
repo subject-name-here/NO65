@@ -6,7 +6,7 @@ import com.unicorns.invisible.no65.model.lands.event.Event
 
 
 abstract class MacGuffin: CellStaticOnPassableDecor(), CellUsable {
-    protected var triggerState = MacGuffinState.WHOLE
+    protected open var triggerState = MacGuffinState.WHOLE
 
     override val symbol: Char
         get() = when (triggerState) {

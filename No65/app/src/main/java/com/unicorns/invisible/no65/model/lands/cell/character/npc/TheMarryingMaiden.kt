@@ -219,6 +219,9 @@ class TheMarryingMaiden(override var cellBelow: Cell): CellNPCStandard(), CellCo
     private var cutsceneStarted = false
     override fun onSight(distanceToProtagonist: Int): Event {
         return EventFactory.createWithNext { manager ->
+            if (manager.gameState.currentMap.getTopCells().none { it is TheMarryingMaiden }) {
+                return@createWithNext Event.Null
+            }
             val brokeUp = THE_MARRYING_MAIDEN_LEFT_THE_PARTY in manager.gameState.flagsMaster
             if (brokeUp && !cutsceneStarted) {
                 cutsceneStarted = true
