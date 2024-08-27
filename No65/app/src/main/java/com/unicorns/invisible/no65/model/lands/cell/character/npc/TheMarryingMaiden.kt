@@ -5,7 +5,6 @@ import com.unicorns.invisible.no65.R
 import com.unicorns.invisible.no65.model.battlefield.enemy.enemies.BattleFieldTheMarryingMaiden
 import com.unicorns.invisible.no65.model.lands.RegisteredFlags.Companion.THE_MARRYING_MAIDEN_LEFT_THE_PARTY
 import com.unicorns.invisible.no65.model.lands.cell.*
-import com.unicorns.invisible.no65.model.lands.cell.control.door.Door
 import com.unicorns.invisible.no65.model.lands.cell.decor.DecorWeb
 import com.unicorns.invisible.no65.model.lands.cell.service.TeleportCell
 import com.unicorns.invisible.no65.model.lands.emotion.Emotion
@@ -86,19 +85,8 @@ class TheMarryingMaiden(override var cellBelow: Cell): CellNPCStandard(), CellCo
         })
 
     override val speakEvent: Event
-        get() = EventFactory.createWithNext {manager ->
-            if (manager.gameState.currentMapIndex == "map_rev_soc") {
-                val doors = manager.gameState.currentMap.getTopCells().filterIsInstance<Door>()
-                if (doors.all { it.isPassable() }) {
-                    EventNPCSpeak(this@TheMarryingMaiden) {
-                        R.string.lands_the_marrying_maiden_sockets_get_out_1
-                    }
-                } else {
-                    EventNPCSpeak(this@TheMarryingMaiden) {
-                        R.string.lands_the_marrying_maiden_sockets_help_1
-                    }
-                }
-            } else if (companionState == CompanionState.AFTER_COMPANIONSHIP) {
+        get() = EventFactory.createWithNext { _ ->
+            if (companionState == CompanionState.AFTER_COMPANIONSHIP) {
                 EventNPCSpeak(this@TheMarryingMaiden) {
                     R.string.lands_the_marrying_maiden_speak_after_companionship_1
                 }
