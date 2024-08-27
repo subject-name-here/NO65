@@ -62,6 +62,11 @@
             android:text="@string/new_game" />
 
         <TextView
+            android:id="@+id/replay_battle"
+            style="@style/menu_item_style"
+            android:text="@string/replay_battles" />
+
+        <TextView
             android:id="@+id/redact_map"
             style="@style/menu_item_style"
             android:text="@string/redact_map" />

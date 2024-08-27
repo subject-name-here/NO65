@@ -8,6 +8,7 @@ import com.unicorns.invisible.no65.databinding.ActivityMainBinding
 import com.unicorns.invisible.no65.databinding.ActivityTurnOnBinding
 import com.unicorns.invisible.no65.init.InitData
 import com.unicorns.invisible.no65.model.GameState65
+import com.unicorns.invisible.no65.model.battlefield.fighter.BattleFieldProtagonist
 import com.unicorns.invisible.no65.model.lands.BattleMode
 import com.unicorns.invisible.no65.model.lands.MoveMode
 import com.unicorns.invisible.no65.model.lands.RegisteredCounters.Companion.WORLD_TRACE_NUMBER
@@ -38,6 +39,7 @@ class MainActivity : RootActivity(), MenuItemManager {
         this,
         ::continueGame,
         ::newGame,
+        ::replayBattlesListener,
         ::redactMapListener,
         ::playMapListener,
         ::volumeListener,
@@ -122,6 +124,24 @@ class MainActivity : RootActivity(), MenuItemManager {
         musicPlayer.nextVolumeMode()
         drawer.updateVolumeMode(musicPlayer.currentVolume)
         GlobalState.put(this, VOLUME_KEY, musicPlayer.currentVolume.toString())
+    }
+
+    private fun replayBattlesListener() {
+        controller.replayBattlesListListener { item ->
+            launchCoroutineOnMain {
+                drawer.fadeToWhite().join()
+                BattleManager(
+                    activity,
+                    BattleFieldProtagonist(item.knowledge),
+                    item.enemiesPool,
+                    item.managerMode
+                ) { _ ->
+                    returnToMenu(playMusic = true)
+                }.apply {
+                    launchBattle()
+                }
+            }
+        }
     }
 
     private fun getCreatedMapsFiles() = SaveManager.loadMapFiles(this)

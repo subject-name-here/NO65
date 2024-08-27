@@ -1,8 +1,6 @@
 package com.unicorns.invisible.no65.model.knowledge
 
-import com.unicorns.invisible.no65.model.elements.trigram.Lake
-import com.unicorns.invisible.no65.model.elements.trigram.Trigram
-import com.unicorns.invisible.no65.model.elements.trigram.Wind
+import com.unicorns.invisible.no65.model.elements.trigram.*
 import kotlinx.serialization.Serializable
 
 
@@ -24,5 +22,20 @@ class Knowledge {
     }
     fun setLakeRequiem() {
         requiems.learn(Lake)
+    }
+
+    companion object {
+        val TYPES = listOf(
+            Knowledge(),
+            Knowledge().apply { learnTrigram(Water) },
+            Knowledge().apply { learnTrigram(Water); learnTrigram(Wind); learnTrigram(Lake) },
+            Knowledge().apply { learnTrigram(Water); learnTrigram(Wind); learnTrigram(Lake); learnTrigram(Fire) },
+            Knowledge().apply { learnTrigram(Water); learnTrigram(Wind); learnTrigram(Lake); learnTrigram(Fire); learnTrigram(Mountain) },
+            Knowledge().apply { learnTrigram(Water); learnTrigram(Wind); learnTrigram(Lake); learnTrigram(Fire); learnTrigram(Mountain); learnTrigram(Thunder) },
+            Knowledge().apply { learnTrigram(Water); learnTrigram(Wind); learnTrigram(Lake); learnTrigram(Fire); learnTrigram(Mountain); learnTrigram(Thunder); learnTrigram(Earth) },
+            Knowledge().apply { setAllBasics() },
+            Knowledge().apply { setAllBasics(); setWindRequiem() },
+            Knowledge().apply { setAllBasics(); setWindRequiem(); setLakeRequiem() },
+        )
     }
 }

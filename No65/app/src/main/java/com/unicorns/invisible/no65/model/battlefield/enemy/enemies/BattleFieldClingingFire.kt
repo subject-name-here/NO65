@@ -23,7 +23,7 @@ import com.unicorns.invisible.no65.util.randInt
 import com.unicorns.invisible.no65.view.music.MusicPlayer
 
 
-class BattleFieldClingingFire : BattleFieldEnemy() {
+class BattleFieldClingingFire(private val isFromExtras: Boolean = false) : BattleFieldEnemy() {
     override val maxHealth: Int = BASE_DAMAGE_TO_ENEMY * BOSS_HEALTH_MULTIPLIER
     override var health: Int = maxHealth
 
@@ -51,9 +51,14 @@ class BattleFieldClingingFire : BattleFieldEnemy() {
     private var knowsAboutEvasion = false
     private var knowsHowToDamage = false
     override suspend fun onBattleBegins(manager: BattleManager) {
-        GlobalState.putBoolean(manager.activity, FOUGHT_WITH_CF, true)
-        knowsAboutEvasion = GlobalState.getBoolean(manager.activity, CF_BATTLE_KNOWS_ABOUT_EVASIONS)
-        knowsHowToDamage = GlobalState.getBoolean(manager.activity, CF_BATTLE_KNOWS_HOW_TO_DAMAGE)
+        if (isFromExtras) {
+            knowsAboutEvasion = true
+            knowsHowToDamage = true
+        } else {
+            GlobalState.putBoolean(manager.activity, FOUGHT_WITH_CF, true)
+            knowsAboutEvasion = GlobalState.getBoolean(manager.activity, CF_BATTLE_KNOWS_ABOUT_EVASIONS)
+            knowsHowToDamage = GlobalState.getBoolean(manager.activity, CF_BATTLE_KNOWS_HOW_TO_DAMAGE)
+        }
 
         if (knowsHowToDamage) {
             musicThemeId = R.raw.battle_clinging_fire2
@@ -71,6 +76,10 @@ class BattleFieldClingingFire : BattleFieldEnemy() {
     override val lineGenerator: BattleFieldLineGenerator = object : BattleFieldLineGenerator {
         override fun getLine(moveNumber: Int): Int {
             return when {
+                isFromExtras && !extrasLineSaid -> {
+                    extrasLineSaid = true
+                    R.string.battlefield_clinging_fire_extras
+                }
                 !knowsHowToDamage && evasionsNumber == 1 && !evasionLine1Said -> {
                     evasionLine1Said = true
                     R.string.battlefield_clinging_fire_evasion_1
