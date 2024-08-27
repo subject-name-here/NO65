@@ -28,7 +28,6 @@ class EventGreatPowerJoke(greatPower: GreatPower) : Event({ manager ->
         drawer.hideTalkingHead()
     }
     launchCoroutine {
-        // TODO: test
         delay(5000L)
         greatPower.state = GreatPower.State.HUB_NOT_LAUGHING
     }

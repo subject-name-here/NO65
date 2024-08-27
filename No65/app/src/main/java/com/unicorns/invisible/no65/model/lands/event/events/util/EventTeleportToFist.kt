@@ -8,7 +8,6 @@ import com.unicorns.invisible.no65.view.music.MusicPlayer
 
 class EventTeleportToFist : Event({ manager ->
     manager.wrapCutscene {
-        // TODO: test
         manager.activity.musicPlayer.playMusicSuspendTillStart(
             R.raw.sfx_teleport_bc,
             behaviour = MusicPlayer.MusicBehaviour.IGNORE,

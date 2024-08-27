@@ -142,8 +142,6 @@ class EventTheMarryingMaiden(val coordinates: Coordinates) : Event({ manager ->
         tmm.emotionState = TheMarryingMaiden.EmotionState.SMILING
         tmm.autoFollow = true
         tmm.companionState = TheMarryingMaiden.CompanionState.DURING_COMPANIONSHIP
-
-        gameState.currentMap.getTopCells().filterIsInstance<TeleportCell>().forEach { it.toMapIndex = 1 }
     }
 
     manager.activity.musicPlayer.playMusic(
