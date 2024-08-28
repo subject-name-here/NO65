@@ -20,13 +20,17 @@ class GenocideLock(override var cellBelow: Cell): CellSemiStatic() {
 
     override fun isPassable(): Boolean = true
 
+    private var isLaunched = false
     override fun onStep(): Event {
         return EventFactory.create { manager ->
-            manager.activity.musicPlayer.playMusic(
-                R.raw.genocider,
-                MusicPlayer.MusicBehaviour.IGNORE,
-                isLooping = false
-            )
+            if (!isLaunched) {
+                isLaunched = true
+                manager.activity.musicPlayer.playMusic(
+                    R.raw.genocider,
+                    MusicPlayer.MusicBehaviour.IGNORE,
+                    isLooping = false
+                )
+            }
         }
     }
 }
